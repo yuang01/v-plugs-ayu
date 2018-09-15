@@ -91,6 +91,7 @@ export default {
 .float_input {
   position: relative;
   width: 100%;
+  height: 40px;
 }
 .form-control {
   position: relative;
