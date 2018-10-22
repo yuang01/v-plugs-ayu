@@ -1,7 +1,9 @@
 import Vue from "vue"
 import FloatInput from "./FloatInput.vue"
+import Pagination from "./Pagination.vue"
 const Components = {
-  FloatInput
+  FloatInput,
+  Pagination
 };
 
 Object.keys(Components).forEach(name => {
