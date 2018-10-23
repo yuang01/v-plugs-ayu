@@ -31,11 +31,11 @@ or
 ```
 # 参数Props
 参数|说明|类型|可选值|默认值
----|--|---|---|--|---|---
-placeholder|提示信息|string|-|-
-type|输入框类型|string|text、password、email|text
-required|是否必填|boolean|true、false|false
-hascolor|自带的输入框颜色|string|has-default、has-danger、has-success、has-warning、has-info|has-default
-color|自定义输入框颜色，若果has-color和color同时存在，则优先color参数|string|red、blue、#000等等|-
+|---|--|---|---|--|---|---|
+|placeholder|提示信息|string|-|-|
+|type|输入框类型|string|text、password、email|text|
+|required|是否必填|boolean|true、false|false|
+|hascolor|自带的输入框颜色|string|has-default、has-danger、has-success、has-warning、has-info|has-default|
+|color|自定义输入框颜色，若果has-color和color同时存在，则优先color参数|string|red、blue、#000等等|-|
 # 结语
 我相信，随着我技术不断地提升，可以写出更多更好的组件的，加油！！
