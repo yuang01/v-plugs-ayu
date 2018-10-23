@@ -30,12 +30,20 @@ or
 <FloatInput></FloatInput>
 ```
 # 参数Props
-参数|说明|类型|可选值|默认值
+<!-- 参数|说明|类型|可选值|默认值
 |---|--|---|---|--|---|---|
 |placeholder|提示信息|string|-|-|
 |type|输入框类型|string|text、password、email|text|
 |required|是否必填|boolean|true、false|false|
 |hascolor|自带的输入框颜色|string|has-default、has-danger、has-success、has-warning、has-info|has-default|
-|color|自定义输入框颜色，若果has-color和color同时存在，则优先color参数|string|red、blue、#000等等|-|
+|color|自定义输入框颜色，若果has-color和color同时存在，则优先color参数|string|red、blue、#000等等|-| -->
+<table>
+    <tr><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></tr>
+    <tr><td>placeholder</td><td>提示信息</td><td>string</td><td>-</td><td>-</td></tr>
+    <tr><td>type</td><td>输入框类型</td><td>string</td><td>text、password、email</td><td>text</td></tr>
+    <tr><td>required</td><td>是否必填</td><td>boolean</td><td>true、false</td><td>false</td></tr>
+    <tr><td>hascolor</td><td>自带的输入框颜色</td><td>string</td><td>has-default、has-danger、has-success、has-warning、has-info</td><td>has-default</td></tr>
+    <tr><td>color</td><td>自定义输入框颜色，若果has-color和color同时存在，则优先color参数</td><td>string</td><td>red、blue、#000等</td><td>-</td></tr>
+</table>
 # 结语
 我相信，随着我技术不断地提升，可以写出更多更好的组件的，加油！！
