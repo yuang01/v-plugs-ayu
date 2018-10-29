@@ -16,7 +16,7 @@
     "build-bundle": "vue-cli-service build --target lib --name personal-component ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
-  "homepage": "https://github.com/yuang01/v-plugs-ayu/tree/dev",  
+  "homepage": "https://github.com/yuang01/v-plugs-ayu/tree/dev",
   "dependencies": {
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",

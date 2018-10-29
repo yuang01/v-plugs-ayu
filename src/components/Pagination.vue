@@ -1,5 +1,5 @@
 <template>
-<div class="ayu-pagination" :class="paginationSize">
+<div class="ayu-pagination" :class="[paginationSize, {'disabled': disabled}]">
   <span class="ayu-total" v-if="showTotal">共{{total}}条</span>
   <ul class="pagination pagination-gap">
     <li class="page-item" @click="prev()" :class="{disabled : pstart}">
@@ -19,10 +19,10 @@
       </a>
     </li>
   </ul>
-  <span class="ayu-pagination__jump">
+  <span class="ayu-pagination__jump" v-if="showJumper">
     前往
     <div class="ayu-input">
-      <input ref="ayuInput" class="ayu-input-inner" type="text" :value="currentPage" @keyup.enter="jumpPage($event.target.value)" @blur="jumpPage($event.target.value)">
+      <input ref="ayuInput" class="ayu-input-inner" type="text" :disabled="disabled" :value="currentPage" @keyup.enter="jumpPage($event.target.value)" @blur="jumpPage($event.target.value)">
     </div>
     页
   </span>
@@ -36,6 +36,9 @@ export default {
     //   default: 0
     // },
     showTotal: {
+      default: false
+    },
+    showJumper: {
       default: false
     },
     pageSize: { // 每页显示的个数，默认为10
@@ -58,6 +61,9 @@ export default {
     },
     nextText: { // 下一页文字， 默认是向右箭头
       default: '&gt;'
+    },
+    disabled: {
+      default: false,
     }
   },
   data() {
@@ -69,10 +75,8 @@ export default {
     curpage(val) {
       if (val > this.pages || val <= 0) {
         this.currentPage = 1;
-        this.$emit('current-change', 1);
       } else {
         this.currentPage = val;
-        this.$emit('current-change', val);
       }
     },
     pageSize(val) {
@@ -159,7 +163,7 @@ export default {
         return;
       }
       this.currentPage = val;
-      this.$emit('changePage', this.currentPage);
+      this.$emit('current-change', this.currentPage);
       this.$emit('update:curpage', this.currentPage); //触发 input 事件，并传入新值
     },
     next() {
@@ -332,9 +336,26 @@ a:-webkit-any-link {
 /* 禁止点击 */
 .page-item.disabled .page-link {
   color: #ccd5db!important;
-  pointer-events: none!important;
+  pointer-events: none;
   background-color: transparent!important;
   border-color: #e4eaec!important;
+}
+.ayu-pagination.disabled{
+  cursor: not-allowed;
+}
+.ayu-pagination.disabled .pagination .page-link,
+.ayu-pagination.disabled .pagination .page-item.active .page-link{
+  color: #ccc!important;
+  background-color: transparent!important;
+}
+.ayu-pagination.disabled .pagination .page-item {
+  pointer-events: none;
+}
+.ayu-pagination.disabled .ayu-input-inner {
+  background-color: #f5f7fa;
+  border-color: #e4e7ed;
+  color: #c0c4cc;
+  cursor: not-allowed;
 }
 /* 中间页码的样式--结束 */
 </style>
