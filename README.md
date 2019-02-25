@@ -1,4 +1,4 @@
-()# 使用
+# 使用
 首先可以先
 ``` bash
 npm config set registry https://registry.npmjs.org/
@@ -53,8 +53,8 @@ nextText|下一页文字|string|任意|&gt;(向右箭头)
 disabled|是否禁用|boolean|true、false|false
 # 事件
 事件名称|说明|回调参数
-:---|:--|:---
-size-change|pageSize 改变时会触发|每页条数
-current-change|curpage 改变时会触发|当前页
-prev-click|用户点击上一页按钮改变当前页后触发|当前页
-next-click|用户点击下一页按钮改变当前页后触发|当前页
+:---|:--|:---|:---|:---
+size-change|pageSize 改变时会触发|每页条数| |
+current-change|curpage 改变时会触发|当前页| |
+prev-click|用户点击上一页按钮改变当前页后触发|当前页| |
+next-click|用户点击下一页按钮改变当前页后触发|当前页| |
