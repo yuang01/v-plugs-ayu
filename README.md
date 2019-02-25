@@ -1,4 +1,4 @@
-# 使用
+()# 使用
 首先可以先
 ``` bash
 npm config set registry https://registry.npmjs.org/
@@ -24,6 +24,7 @@ or
 # 参数Props
 <table>
     <tr><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></tr>
+    <tr><td>value(v-model)</td><td>值</td><td>string</td><td>-</td><td>-</td></tr>
     <tr><td>placeholder</td><td>提示信息</td><td>string</td><td>-</td><td>-</td></tr>
     <tr><td>type</td><td>输入框类型</td><td>string</td><td>text、password、email</td><td>text</td></tr>
     <tr><td>required</td><td>是否必填</td><td>boolean</td><td>true、false</td><td>false</td></tr>
@@ -32,7 +33,7 @@ or
 </table>
 
 # pagination分页组件组件预览
-![预览](/images/pagination.gif)
+![预览](https://github.com/yuang01/myblog/blob/yuangboy/source/images/pagination.gif)
 页面中直接使用以下标签就行了
 ``` html
 <pagination></pagination>
