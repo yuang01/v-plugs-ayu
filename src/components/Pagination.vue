@@ -32,9 +32,6 @@
 <script>
 export default {
   props: {
-    // pages: { // 总页数
-    //   default: 0
-    // },
     showTotal: {
       default: false
     },
@@ -72,12 +69,13 @@ export default {
     };
   },
   watch: {
+    currentPage(val) {
+      this.resetCurPage(val);
+      this.$emit('current-change', this.currentPage);
+      this.$emit('update:curpage', this.currentPage); //触发 input 事件，并传入新值
+    },
     curpage(val) {
-      if (val > this.pages || val <= 0) {
-        this.currentPage = 1;
-      } else {
-        this.currentPage = val;
-      }
+      this.resetCurPage(val);
     },
     pageSize(val) {
       if (val > this.total) {
@@ -90,10 +88,14 @@ export default {
         this.$emit('size-change', val);
       }
       if (this.currentPage > this.pages) {
-        this.currentPage = this.pages;
-        this.$emit('update:curpage', this.currentPage); //触发 input 事件，并传入新值
+        this.currentPage = 1;
       }
     },
+    total(val) {
+      if (this.currentPage > this.pages) {
+        this.currentPage = 1;
+      }
+    }
   },
   computed: {
     pages() {
@@ -163,8 +165,6 @@ export default {
         return;
       }
       this.currentPage = val;
-      this.$emit('current-change', this.currentPage);
-      this.$emit('update:curpage', this.currentPage); //触发 input 事件，并传入新值
     },
     next() {
       if (this.currentPage === this.pages || this.pages === 0) {
@@ -195,6 +195,14 @@ export default {
     hoveroutColor(ev) {
       ev.currentTarget.style.borderColor = '#e4eaec';
       ev.currentTarget.style.color = '#76838f';
+    },
+    // 重置currentPage
+    resetCurPage(val) {
+      if (val > this.total / this.pageSize || val <= 0) {
+        this.currentPage = 1;
+      } else {
+        this.currentPage = val;
+      }
     }
   },
 };

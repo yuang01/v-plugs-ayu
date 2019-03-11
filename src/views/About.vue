@@ -8,13 +8,25 @@
     <p>样式：大</p>
     <ayu-pageination @size-change="handleSizePage" :show-jumper="true" :show-total="false" :page-size.sync="pageSize" @current-change="handleCurrentChange" @next-click="handNextClick" @prev-click="handPrevClick" prev-text="" next-text="" :total="total" :curpage.sync="curpage" bgc="" pagination-size ="pagination-lg"></ayu-pageination> -->
     <p>自定义颜色</p>
-    <ayu-pageination @size-change="handleSizePage" :show-jumper="true" :show-total="true" :page-size.sync="pageSize" @current-change="handleCurrentChange" @next-click="handNextClick" @prev-click="handPrevClick" prev-text="" next-text="" :total="total" :curpage.sync="curpage" bgc="red" pagination-size ="pagination-lg"></ayu-pageination>
+    <ayu-pageination 
+      @size-change="handleSizePage" 
+      :show-jumper="true" 
+      :show-total="true" 
+      :page-size.sync="pageSize" 
+      @current-change="handleCurrentChange" 
+      @next-click="handNextClick"
+      @prev-click="handPrevClick"
+      prev-text="" next-text="" 
+      :total="total" 
+      :curpage.sync="curpage" 
+      bgc="red" pagination-size ="pagination-lg">
+    </ayu-pageination>
     <!-- <p>禁止点击</p>
     <ayu-pageination @size-change="handleSizePage" :disabled="true" :show-total="false" :page-size.sync="pageSize" @current-change="handleCurrentChange" @next-click="handNextClick" @prev-click="handPrevClick" prev-text="" next-text="" :total="total" :curpage.sync="curpage" bgc="" pagination-size ="pagination-sm"></ayu-pageination> -->
     <button @click="change" style="margin-top: 30px;">一页显示15条表格数据</button>
     <button @click="change2">一页显示10条表格数据</button>
     <button @click="change3">当前页为第2页</button>
-    <button @click="change4">总数变为800</button>
+    <button @click="change4">总数变为100</button>
   </div>
 </template>
 <script>
@@ -32,10 +44,10 @@ export default {
   },
    methods: {
     handPrevClick(val) {
-      console.log(val)
+      console.log('点击上一页')
     },
     handNextClick(val) {
-      console.log(val)
+      console.log('点击下一页')
     },
     handleCurrentChange(val) {
       console.log(val)
@@ -50,7 +62,7 @@ export default {
       this.curpage = 2
     },
     change4() {
-      this.total = 800;
+      this.total = 100;
     },
     handleSizePage(val) {
       console.log(val)
