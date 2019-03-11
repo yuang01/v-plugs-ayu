@@ -1,7 +1,5 @@
-<<<<<<< HEAD
+
 欢迎<a href="https://github.com/yuang01/v-plugs-ayu" target="_blank">star</a>
-=======
->>>>>>> e738e75bd26b60709154c435e5b766fb211b532f
 # 使用
 首先可以先
 ``` bash
@@ -37,11 +35,7 @@ or
 </table>
 
 # pagination分页组件组件预览
-<<<<<<< HEAD
 ![预览](https://yuang.site//images/pagination.gif)
-=======
-![预览](https://github.com/yuang01/myblog/blob/yuangboy/source/images/pagination.gif)
->>>>>>> e738e75bd26b60709154c435e5b766fb211b532f
 页面中直接使用以下标签就行了
 ``` html
 <pagination></pagination>
