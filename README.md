@@ -1,11 +1,8 @@
 
 欢迎<a href="https://github.com/yuang01/v-plugs-ayu" target="_blank">star</a>
-# 使用
-首先可以先
-``` bash
-npm config set registry https://registry.npmjs.org/
-```
-然后
+# v-plugs-ayu · ![npm](https://img.shields.io/npm/v/v-plugs-ayu.svg?color=success) ![license](https://img.shields.io/github/license/yuang01/v-plugs-ayu.svg) ![downloads](https://img.shields.io/npm/dt/v-plugs-ayu.svg)
+
+# 安装
 ``` bash
 npm install --save v-plugs-ayu
 ```
