@@ -57,15 +57,32 @@ prev-click|用户点击上一页按钮改变当前页后触发|当前页|-|-
 next-click|用户点击下一页按钮改变当前页后触发|当前页|-|-
 ## Select选择器
 ![预览](https://github.com/yuang01/carousel/blob/gh-pages/images/select.gif)
+
 页面中直接使用以下标签就行了
 ``` html
-<ayu-select v-model="inputValue" placeholder="请选择您的英雄">
+<ayu-select v-model="inputValue" placeholder="请选择" disabled  multiple collapse-tags>
   <ayu-option 
-    v-for="item in options2" 
+    v-for="item in options" 
     :key="item.value" 
     :label="item.label" 
-    :value="item.value">
+    :value="item.value"
+    :disabled="item.disabled">
     {{ item.label }}
   </ayu-option>
 </ayu-select>
 ```
+### 参数Props
+参数|说明|类型|可选值|默认值
+:---|:---|:---|:---|:---
+placeholder|占位符|String|-|请选择
+key|作为 value 唯一标识的键名，绑定值为对象类型时必填|String|-|value
+multiple|是否多选|Boolean|true/false|false
+disabled|是否禁用|Boolean|true/false|false
+collapseTags|是否缩略已选项|Boolean|true/false|true
+
+### 事件
+事件名称|说明|回调参数|-|-
+:---|:---|:---|:---|:---
+change|在 Select 值改变时触发|Select Options|-|-
+focus|在 Select 获得焦点时触发|event|-|-
+blur|在 Select 失去焦点时触发|event|-|-
