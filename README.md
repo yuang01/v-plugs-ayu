@@ -20,7 +20,7 @@ import "v-plugs-ayu";
 or
 <FloatInput></FloatInput>
 ``` 
-# 参数Props
+### 参数Props
 <table>
     <tr><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></tr>
     <tr><td>value(v-model)</td><td>值</td><td>string</td><td>-</td><td>-</td></tr>
@@ -37,7 +37,7 @@ or
 ``` html
 <pagination></pagination>
 ```
-# 参数Props
+### 参数Props
 参数|说明|类型|可选值|默认值
 :---|:---|:---|:---|:---
 showTotal|显示总条数|boolean|true、false|false
@@ -50,7 +50,7 @@ bgc|组件颜色|string|任意颜色值|#3e8ef7
 prevText|上一页文字|string|任意|&lt;(向左箭头)
 nextText|下一页文字|string|任意|&gt;(向右箭头)
 disabled|是否禁用|boolean|true、false|false
-# 事件
+### 事件
 事件名称|说明|回调参数|-|-
 :---|:---|:---|:---|:---
 size-change|pageSize 改变时会触发|每页条数|-|-
