@@ -1,7 +1,7 @@
 
 欢迎<a href="https://github.com/yuang01/v-plugs-ayu" target="_blank">star</a>
 # v-plugs-ayu · ![npm](https://img.shields.io/npm/v/v-plugs-ayu.svg?color=success) ![license](https://img.shields.io/github/license/yuang01/v-plugs-ayu.svg) ![downloads](https://img.shields.io/npm/dt/v-plugs-ayu.svg)
-
+一个基于vue.js的组件库
 # 安装
 ``` bash
 npm install --save v-plugs-ayu
