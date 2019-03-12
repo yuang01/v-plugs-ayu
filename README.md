@@ -2,7 +2,7 @@
 欢迎<a href="https://github.com/yuang01/v-plugs-ayu" target="_blank">star</a>
 # v-plugs-ayu · ![npm](https://img.shields.io/npm/v/v-plugs-ayu.svg?color=success) ![license](https://img.shields.io/github/license/yuang01/v-plugs-ayu.svg) ![downloads](https://img.shields.io/npm/dt/v-plugs-ayu.svg)
 一个基于vue.js的组件库 (A Component Library Based on vue.js)
-# 安装
+## 安装
 ``` bash
 npm install --save v-plugs-ayu
 ```
@@ -11,7 +11,7 @@ npm install --save v-plugs-ayu
 import "v-plugs-ayu/dist/personal-component.css";
 import "v-plugs-ayu";
 ```
-# FloatInput组件预览
+## FloatInput组件预览
 ![预览](https://yuang.site//images/myplug-floatinput.gif)
 
 页面中直接使用以下标签就行了
@@ -19,7 +19,7 @@ import "v-plugs-ayu";
 <float-input></float-input>
 or
 <FloatInput></FloatInput>
-```
+``` 
 # 参数Props
 <table>
     <tr><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></tr>
@@ -31,7 +31,7 @@ or
     <tr><td>color</td><td>自定义输入框颜色，若果has-color和color同时存在，则优先color参数</td><td>string</td><td>red、blue、#000等</td><td>-</td></tr>
 </table>
 
-# pagination分页组件组件预览
+## pagination分页组件组件预览
 ![预览](https://yuang.site//images/pagination.gif)
 页面中直接使用以下标签就行了
 ``` html
