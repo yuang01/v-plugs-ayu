@@ -60,6 +60,7 @@ next-click|用户点击下一页按钮改变当前页后触发|当前页|-|-
 
 页面中直接使用以下标签就行了
 ``` html
+// select上添加disabled则全部禁用，option上的disabled是某一项禁用，在data中的options对象上对某一项添加disabled:true即可禁用某一项
 <ayu-select v-model="inputValue" placeholder="请选择" disabled  multiple collapse-tags>
   <ayu-option 
     v-for="item in options" 
