@@ -14,9 +14,9 @@ import "v-plugs-ayu";
 
 页面中直接使用以下标签就行了
 ``` html
-<float-input></float-input>
+<ayu-floatinput></ayu-floatinput>
 or
-<FloatInput></FloatInput>
+<ayuFloatinput></ayu-Floatinput>
 ``` 
 ### 参数Props
 <table>
@@ -33,7 +33,7 @@ or
 ![预览](https://yuang.site//images/pagination.gif)
 页面中直接使用以下标签就行了
 ``` html
-<pagination></pagination>
+<ayu-pagination></ayu-pagination>
 ```
 ### 参数Props
 参数|说明|类型|可选值|默认值
@@ -55,3 +55,17 @@ size-change|pageSize 改变时会触发|每页条数|-|-
 current-change|curpage 改变时会触发|当前页|-|-
 prev-click|用户点击上一页按钮改变当前页后触发|当前页|-|-
 next-click|用户点击下一页按钮改变当前页后触发|当前页|-|-
+## Select选择器
+![预览](https://github.com/yuang01/carousel/blob/gh-pages/images/select.gif)
+页面中直接使用以下标签就行了
+``` html
+<ayu-select v-model="inputValue" placeholder="请选择您的英雄">
+  <ayu-option 
+    v-for="item in options2" 
+    :key="item.value" 
+    :label="item.label" 
+    :value="item.value">
+    {{ item.label }}
+  </ayu-option>
+</ayu-select>
+```

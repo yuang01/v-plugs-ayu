@@ -1,9 +1,13 @@
 import Vue from "vue"
-import FloatInput from "./FloatInput.vue"
-import Pagination from "./Pagination.vue"
+import ayuFloatinput from "./FloatInput"
+import ayuPagination from "./Pagination"
+import ayuSelect from "./components/Select";
+import ayuOption from "./components/Select/option";
 const Components = {
-  FloatInput,
-  Pagination
+  ayuFloatinput,
+  ayuPagination,
+  ayuSelect,
+  ayuOption
 };
 
 Object.keys(Components).forEach(name => {
