@@ -1,8 +1,8 @@
 import Vue from "vue"
 import ayuFloatinput from "./FloatInput"
 import ayuPagination from "./Pagination"
-import ayuSelect from "./components/Select";
-import ayuOption from "./components/Select/option";
+import ayuSelect from "./Select";
+import ayuOption from "./Select/option";
 const Components = {
   ayuFloatinput,
   ayuPagination,
