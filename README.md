@@ -16,7 +16,7 @@ import "v-plugs-ayu";
 ``` html
 <ayu-floatinput></ayu-floatinput>
 or
-<ayuFloatinput></ayu-Floatinput>
+<ayuFloatinput></ayuFloatinput>
 ``` 
 ### 参数Props
 <table>
