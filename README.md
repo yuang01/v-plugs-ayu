@@ -2,7 +2,7 @@
 一个基于vue.js的组件库 (A Component Library Based on vue.js)
 ## 安装
 ``` bash
-npm install --save v-plugs-ayu
+npm install v-plugs-ayu --save
 ```
 在man.js中引入即可
 ``` javascript
