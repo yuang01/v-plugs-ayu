@@ -87,3 +87,5 @@ collapseTags|是否缩略已选项|Boolean|true/false|true
 change|在 Select 值改变时触发|Select Options|-|-
 focus|在 Select 获得焦点时触发|event|-|-
 blur|在 Select 失去焦点时触发|event|-|-
+
+更多组件，敬请期待...
