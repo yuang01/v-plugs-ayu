@@ -17,6 +17,7 @@
     <button @click="change2">一页显示10条表格数据</button>
     <button @click="change3">当前页为第2页</button>
     <button @click="change4">总数变为100</button> -->
+    <!-- <ayu-floatinput v-model="inputValue" placeholder="标题" color="red"></ayu-floatinput>
     {{inputValue}}
     <div style="display:flex;">
       <div style="width:200px;height: 100px;margin-top:15px;margin-right:10px;">
@@ -80,21 +81,40 @@
           </ayu-option>
         </ayu-select>
       </div>
-    </div>
+    </div> -->
+    <ayu-carousel height="300px" @change="changeCarousel" type="fade" :interval="5000">
+      <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
+        <img :src="item.src" alt="" style="width:100%;height:100%">
+      </ayu-carousel-item>
+    </ayu-carousel>
+    <button @click="num = 3">to 3</button> <button @click="num = 8">to 8</button>
   </div>
 </template>
 <script>
+  import ayuCarousel from "@/components/Carousel";
+  import ayuCarouselItem from "@/components/Carousel/item";
+  import Floatinput from "@/components/FloatInput";
   import Pageination from "@/components/Pagination";
   import ayuSelect from "@/components/Select";
   import ayuOption from "@/components/Select/option";
   export default {
     components: {
       "ayu-pageination": Pageination,
+      "ayu-floatinput": Floatinput,
       ayuSelect,
-      ayuOption
+      ayuOption,
+      ayuCarousel,
+      ayuCarouselItem
     },
     data() {
       return {
+        num: 5,
+        cardata: [
+          {src: 'https://yuang01.github.io/carousel/images/pic1.jpg'},
+          {src: 'https://yuang01.github.io/carousel/images/pic2.jpg'},
+          {src: 'https://yuang01.github.io/carousel/images/pic3.jpg'},
+          {src: 'https://yuang01.github.io/carousel/images/pic4.jpg'}
+        ],
         total: 500,
         curpage: 1,
         pageSize: 10,
@@ -197,6 +217,9 @@
       };
     },
     methods: {
+      changeCarousel(val, oldVal) {
+        console.log(val, oldVal);
+      },
       handPrevClick(val) {
         console.log("点击上一页");
       },
