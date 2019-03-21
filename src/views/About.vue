@@ -82,7 +82,7 @@
         </ayu-select>
       </div>
     </div> -->
-    <ayu-carousel height="300px" @change="changeCarousel" type="fade" :interval="5000">
+    <ayu-carousel height="300px" @change="changeCarousel">
       <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
         <img :src="item.src" alt="" style="width:100%;height:100%">
       </ayu-carousel-item>

@@ -52,7 +52,7 @@ export default {
     },
     type: {
       type: String,
-      default: ''
+      default: 'slide'
     },
     arrow: {
       type: String,
