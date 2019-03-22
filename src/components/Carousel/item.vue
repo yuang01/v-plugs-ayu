@@ -49,7 +49,6 @@ export default {
     top: 0;
     width: 100%;
     height: 100%;
-    // display: inline-block;
     overflow: hidden;
     z-index: 0;
   }
@@ -89,4 +88,3 @@ export default {
     opacity: 0;
   }
 </style>
-

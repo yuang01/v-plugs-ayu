@@ -22,8 +22,7 @@
       <li class="ayu-carousel_indicator"
       v-for="(item, index) in items" :key="index"
       :class="{'is-active': index === activeIndex}"
-      @click.stop="handleIndicatorClick(index)"
-      >
+      @click.stop="handleIndicatorClick(index)">
         <button class="ayu-carousel_botton"></button>
       </li>
     </ul>
@@ -163,10 +162,7 @@ export default {
 
 <style lang="scss" scoped>
 .ayu-carousel {
-  // width、border烧火需要修改
-  width: 500px;
-  border: 1px solid #000;
-  // background-color: skyblue;
+  width: 100%;
   overflow-x: hidden;
   position: relative;
   // 箭头
