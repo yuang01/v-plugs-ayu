@@ -52,7 +52,7 @@ export default {
     },
     type: {
       type: String,
-      default: 'slide'
+      default: ''
     },
     arrow: {
       type: String,
@@ -102,15 +102,8 @@ export default {
       this.activeIndex = index;
     },
     resetTrantionType(val, oldVal) {
-      if (this.type === 'slide') {
-        if (val < oldVal) {
-          this.slideType = 'right';
-        } else {
-          this.slideType = 'left';
-        }
-      } else {
-        this.slideType = 'fade';
-      }
+      if (this.type === '') return;
+      this.slideType = this.type === 'slide' ? val < oldVal ? 'right' : 'left' : 'fade';
       this.items.forEach(item => {
         item.translateSlideType(this.slideType);
       });
