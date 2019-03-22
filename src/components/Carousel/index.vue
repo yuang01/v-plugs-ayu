@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import _ from 'lodash';
 export default {
   name: 'AyuCarousel',
   props: {
@@ -80,29 +81,25 @@ export default {
     }
   },
   methods: {
-    prev() {
-      const oldVal = this.activeIndex;
+    prev: _.throttle(function () {
       let index = this.activeIndex - 1;
-      this.resetTrantionType(index, oldVal);
+      this.resetTrantionType(index, this.activeIndex); // 通过值的变化来改变动画效果
       if (index === -1) {
         index = this.items.length - 1;
       }
       this.activeIndex = index;
-    },
-    next() {
-      const oldVal = this.activeIndex;
+    }, 500),
+    next: _.throttle(function () {
       let index = this.activeIndex + 1;
-      this.resetTrantionType(index, oldVal);
+      this.resetTrantionType(index, this.activeIndex);
       if (index === this.items.length) {
         index = 0;
       }
       this.activeIndex = index;
-      
-    },
+    }, 500),
     handleIndicatorClick(index) {
-      const oldVal = this.activeIndex;
+      this.resetTrantionType(index, this.activeIndex);
       this.activeIndex = index;
-      this.resetTrantionType(this.activeIndex, oldVal);
     },
     resetTrantionType(val, oldVal) {
       if (this.type === 'slide') {
