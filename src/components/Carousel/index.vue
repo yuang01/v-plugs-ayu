@@ -88,7 +88,7 @@ export default {
         index = this.items.length - 1;
       }
       this.activeIndex = index;
-    }, 500),
+    }, 300),
     next: _.throttle(function () {
       let index = this.activeIndex + 1;
       this.resetTrantionType(index, this.activeIndex);
@@ -96,7 +96,7 @@ export default {
         index = 0;
       }
       this.activeIndex = index;
-    }, 500),
+    }, 300),
     handleIndicatorClick(index) {
       this.resetTrantionType(index, this.activeIndex);
       this.activeIndex = index;

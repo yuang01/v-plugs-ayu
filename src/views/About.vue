@@ -1,94 +1,12 @@
 <template>
   <div class="aa">
-    <!-- <h1>This is an about page</h1> -->
-    <!-- <p>样式：小</p>
-      <ayu-pageination @size-change="handleSizePage" :show-total="false" :page-size.sync="pageSize" @current-change="handleCurrentChange" @next-click="handNextClick" @prev-click="handPrevClick" prev-text="" next-text="" :total="total" :curpage.sync="curpage" bgc="" pagination-size ="pagination-sm"></ayu-pageination>
-      <p>样式：中(默认)</p>
-      <ayu-pageination @size-change="handleSizePage" :show-total="false" :page-size.sync="pageSize" @current-change="handleCurrentChange" @next-click="handNextClick" @prev-click="handPrevClick" prev-text="" next-text="" :total="total" :curpage.sync="curpage" bgc="" pagination-size =""></ayu-pageination>
-      <p>样式：大</p>
-      <ayu-pageination @size-change="handleSizePage" :show-jumper="true" :show-total="false" :page-size.sync="pageSize" @current-change="handleCurrentChange" @next-click="handNextClick" @prev-click="handPrevClick" prev-text="" next-text="" :total="total" :curpage.sync="curpage" bgc="" pagination-size ="pagination-lg"></ayu-pageination> -->
-    <!-- <p>自定义颜色</p>
-    <ayu-pageination @size-change="handleSizePage" :show-jumper="true" :show-total="true" :page-size.sync="pageSize" @current-change="handleCurrentChange" @next-click="handNextClick" @prev-click="handPrevClick" prev-text="" next-text="" :total="total" :curpage.sync="curpage"
-      bgc="red" pagination-size="pagination-lg">
-    </ayu-pageination> -->
-    <!-- <p>禁止点击</p>
-      <ayu-pageination @size-change="handleSizePage" :disabled="true" :show-total="false" :page-size.sync="pageSize" @current-change="handleCurrentChange" @next-click="handNextClick" @prev-click="handPrevClick" prev-text="" next-text="" :total="total" :curpage.sync="curpage" bgc="" pagination-size ="pagination-sm"></ayu-pageination> -->
-    <!-- <button @click="change" style="margin-top: 30px;">一页显示15条表格数据</button>
-    <button @click="change2">一页显示10条表格数据</button>
-    <button @click="change3">当前页为第2页</button>
-    <button @click="change4">总数变为100</button> -->
-    <!-- <ayu-floatinput v-model="inputValue" placeholder="标题" color="red"></ayu-floatinput>
-    {{inputValue}}
-    <div style="display:flex;">
-      <div style="width:200px;height: 100px;margin-top:15px;margin-right:10px;">
-        <p style="margin-bottom:10px">禁用状态</p>
-        <ayu-select v-model="inputValue" placeholder="请您禁用英雄" disabled>
-          <ayu-option
-            v-for="item in options" 
-            :key="item.value" 
-            :label="item.label" 
-            :value="item.value">
-            {{ item.label }}
-          </ayu-option>
-        </ayu-select>
-      </div>
-      <div style="width:200px;height: 100px;margin-top:15px;margin-right:10px;">
-        <p style="margin-bottom:10px">有禁用选项</p>
-        <ayu-select v-model="inputValue" placeholder="已禁的英雄">
-          <ayu-option 
-            v-for="item in options" 
-            :key="item.value" 
-            :label="item.label" 
-            :value="item.value"
-            :disabled="item.disabled">
-            {{ item.label }}
-          </ayu-option>
-        </ayu-select>
-      </div>
-      <div style="width:200px;height: 100px;margin-top:15px;margin-right:10px;">
-        <p style="margin-bottom:10px">单选</p>
-        <ayu-select v-model="inputValue" placeholder="请选择您的英雄">
-          <ayu-option 
-            v-for="item in options2" 
-            :key="item.value" 
-            :label="item.label" 
-            :value="item.value">
-            {{ item.label }}
-          </ayu-option>
-        </ayu-select>
-      </div>
-      <div style="width:200px;height: 100px;margin-top:15px;margin-right:10px;">
-        <p style="margin-bottom:10px">基础多选</p>
-        <ayu-select v-model="inputValue" placeholder="请购买装备" multiple>
-          <ayu-option 
-            v-for="item in options3" 
-            :key="item.value" 
-            :label="item.label" 
-            :value="item.value">
-            {{ item.label }}
-          </ayu-option>
-        </ayu-select>
-      </div>
-      <div style="width:200px;height: 100px;margin-top:15px;margin-right:10px;">
-        <p style="margin-bottom:10px">多选省略显示</p>
-        <ayu-select v-model="inputValue" placeholder="击杀人头数" multiple collapse-tags>
-          <ayu-option
-            v-for="item in options4" 
-            :key="item.value" 
-            :label="item.label" 
-            :value="item.value">
-            {{ item.label }}
-          </ayu-option>
-        </ayu-select>
-      </div>
-    </div> -->
     <ayu-carousel height="300px" @change="changeCarousel" arrow="always" type="slide">
       <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
         <img :src="item.src" alt="" style="width:100%;">
       </ayu-carousel-item>
     </ayu-carousel>
 
-    <button @click="num = 3">to 3</button> <button @click="num = 8">to 8</button>
+    <button @click="addImgFn()">增加图片</button> <button @click="reduceImgFn()">减少图片</button>
 
     <ayu-carousel height="300px" @change="changeCarousel" type="fade">
       <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
@@ -117,10 +35,10 @@
       return {
         num: 5,
         cardata: [
-          {src: 'https://yuang01.github.io/carousel/images/pic1.jpg'},
-          {src: 'https://yuang01.github.io/carousel/images/pic2.jpg'},
-          {src: 'https://yuang01.github.io/carousel/images/pic3.jpg'},
-          {src: 'https://yuang01.github.io/carousel/images/pic4.jpg'}
+          {src: 'https://images.pexels.com/photos/2014693/pexels-photo-2014693.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+          {src: 'https://images.pexels.com/photos/1122400/pexels-photo-1122400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+          {src: 'https://images.pexels.com/photos/1199967/pexels-photo-1199967.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+          {src: 'https://images.pexels.com/photos/1615018/pexels-photo-1615018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
         ],
         total: 500,
         curpage: 1,
@@ -224,32 +142,15 @@
       };
     },
     methods: {
-      changeCarousel(val, oldVal) {
-        console.log(val, oldVal);
+      addImgFn() {
+        this.cardata.push(
+          { src: 'https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+          { src: 'https://images.pexels.com/photos/1520145/pexels-photo-1520145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+          { src: 'https://images.pexels.com/photos/5946/books-yellow-book-reading.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+        );
       },
-      handPrevClick(val) {
-        console.log("点击上一页");
-      },
-      handNextClick(val) {
-        console.log("点击下一页");
-      },
-      handleCurrentChange(val) {
-        console.log(val);
-      },
-      change() {
-        this.pageSize = 20;
-      },
-      change2() {
-        this.pageSize = 10;
-      },
-      change3() {
-        this.curpage = 2;
-      },
-      change4() {
-        this.total = 100;
-      },
-      handleSizePage(val) {
-        console.log(val);
+      reduceImgFn() {
+        this.cardata.splice(0, 3);
       }
     }
   };
