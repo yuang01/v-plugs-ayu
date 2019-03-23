@@ -76,10 +76,10 @@ next-click|用户点击下一页按钮改变当前页后触发|当前页|-|-
 参数|说明|类型|可选值|默认值
 :---|:---|:---|:---|:---
 placeholder|占位符|String|-|请选择
-key|作为 value 唯一标识的键名，绑定值为对象类型时必填|String|-|value
+optionKey|作为 value 唯一标识的键名，绑定值为对象类型时必填|String|-|value
 multiple|是否多选|Boolean|true/false|false
 disabled|是否禁用|Boolean|true/false|false
-collapseTags|是否缩略已选项|Boolean|true/false|true
+collapseTags|是否缩略已选项|Boolean|true/false|false
 
 ### 事件
 事件名称|说明|回调参数|-|-
