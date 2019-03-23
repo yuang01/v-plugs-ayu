@@ -90,6 +90,14 @@ blur|在 Select 失去焦点时触发|event|-|-
 
 ## Carousel幻灯片组件
 ![预览](https://github.com/yuang01/carousel/blob/gh-pages/images/carousel.gif)
+页面中使用
+``` html
+<ayu-carousel height="300px" arrow="always" type="slide">
+  <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
+    <img :src="item.src" alt="" style="width:100%;">
+  </ayu-carousel-item>
+</ayu-carousel>
+```
 ### 参数Props
 参数|说明|类型|可选值|默认值
 :---|:---|:---|:---|:---
