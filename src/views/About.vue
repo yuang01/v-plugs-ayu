@@ -2,7 +2,7 @@
   <div class="aa">
     <ayu-carousel height="300px" arrow="always" type="slide">
       <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
-        <img :src="item.src" alt="" style="width:100%;height: 100%;">
+        <img :src="item.src" alt="" style="width:100%;">
       </ayu-carousel-item>
     </ayu-carousel>
 

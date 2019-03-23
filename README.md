@@ -88,4 +88,19 @@ change|在 Select 值改变时触发|Select Options|-|-
 focus|在 Select 获得焦点时触发|event|-|-
 blur|在 Select 失去焦点时触发|event|-|-
 
+## Carousel幻灯片组件
+![预览](https://github.com/yuang01/carousel/blob/gh-pages/images/carousel.gif)
+### 参数Props
+参数|说明|类型|可选值|默认值
+:---|:---|:---|:---|:---
+height|轮播图的高度|String|-|-
+initial-index|初始状态激活的幻灯片的索引，从 0 开始|Number|-|0
+autoplay|是否自动切换|Boolean|true/false|true
+interval|自动切换的时间间隔，单位为毫秒|Number|-|3000
+type|幻灯片类型|String|slide/fade|-
+arrow|切换箭头的显示时机|String|always/hover/never|hover
+### 事件
+事件名称|说明|回调参数|-|-
+:---|:---|:---|:---|:---
+change|幻灯片切换时触发|目前激活的幻灯片的索引，原幻灯片的索引|-|-
 更多组件，敬请期待...

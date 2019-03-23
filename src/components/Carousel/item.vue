@@ -68,7 +68,7 @@ export default {
     transform:translateX(0);
   }
   .right-enter-active {
-    transform: translate3d(0%);
+    transform: translateX(0%);
     transition: transform .5s ease;
   }
   .right-leave-active {
