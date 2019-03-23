@@ -101,7 +101,7 @@ blur|在 Select 失去焦点时触发|event|-|-
 ### 参数Props
 参数|说明|类型|可选值|默认值
 :---|:---|:---|:---|:---
-height|轮播图的高度|String|-|-
+height|幻灯片的高度|String|-|-
 initial-index|初始状态激活的幻灯片的索引，从 0 开始|Number|-|0
 autoplay|是否自动切换|Boolean|true/false|true
 interval|自动切换的时间间隔，单位为毫秒|Number|-|3000
