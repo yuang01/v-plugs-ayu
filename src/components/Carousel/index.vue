@@ -103,9 +103,8 @@ export default {
     },
     resetTrantionType(val, oldVal) {
       if (this.type === '') return;
-      this.slideType = this.type === 'slide' ? val < oldVal ? 'right' : 'left' : 'fade';
       this.items.forEach(item => {
-        item.translateSlideType(this.slideType);
+        item.translateSlideType(val, oldVal, this.type);
       });
     },
     resetItemShow() {

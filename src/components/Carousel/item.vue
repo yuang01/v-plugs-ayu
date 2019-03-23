@@ -21,8 +21,8 @@ export default {
     translateItem(activeIndex) {
       this.activeIndex = activeIndex;
     },
-    translateSlideType(slideType) {
-      this.slideType = slideType;
+    translateSlideType(val, oldVal, type) {
+      this.slideType = type === 'slide' ? val < oldVal ? 'right' : 'left' : 'fade';
     }
   },
   created() {
@@ -55,11 +55,11 @@ export default {
   // 动画
   .left-enter-active {
     transform:translateX(0);
-    transition:all .5s ease;
+    transition:transform .5s ease;
   }
   .left-leave-active {
     transform:translateX(-100%);
-    transition:all .5s ease
+    transition:transform .5s ease
   }
   .left-enter {
     transform:translateX(100%);
@@ -69,11 +69,11 @@ export default {
   }
   .right-enter-active {
     transform: translate3d(0%);
-    transition: all .5s ease;
+    transition: transform .5s ease;
   }
   .right-leave-active {
     transform: translateX(100%);
-    transition: all .5s ease;
+    transition: transform .5s ease;
   }
   .right-enter {
     transform: translateX(-100%);

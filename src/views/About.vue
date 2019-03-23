@@ -1,14 +1,14 @@
 <template>
   <div class="aa">
-    <ayu-carousel height="300px" @change="changeCarousel" arrow="always" type="slide">
+    <ayu-carousel height="300px" arrow="always" type="slide">
       <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
-        <img :src="item.src" alt="" style="width:100%;">
+        <img :src="item.src" alt="" style="width:100%;height: 100%;">
       </ayu-carousel-item>
     </ayu-carousel>
 
     <button @click="addImgFn()">增加图片</button> <button @click="reduceImgFn()">减少图片</button>
 
-    <ayu-carousel height="300px" @change="changeCarousel" type="fade">
+    <ayu-carousel height="300px" type="fade">
       <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
         <img :src="item.src" alt="" style="width:100%;">
       </ayu-carousel-item>
@@ -159,7 +159,7 @@
 <style scoped>
   .aa {
     margin: 0 auto;
-    width: 900px;
+    width: 600px;
   }
 </style>
 
