@@ -111,4 +111,27 @@ arrow|切换箭头的显示时机|String|always/hover/never|hover
 事件名称|说明|回调参数|-|-
 :---|:---|:---|:---|:---
 change|幻灯片切换时触发|目前激活的幻灯片的索引，原幻灯片的索引|-|-
+
+## Button组件
+![预览](https://github.com/yuang01/carousel/blob/gh-pages/images/button.png)
+页面中使用
+``` html
+<ayu-button >ayu按钮</ayu-button>
+```
+### 参数说明
+参数|说明|类型|可选值|默认值
+:---|:---|:---|:---|:---
+size|按钮大小|String|large/medium/small/mini|medium
+type|按钮类型|String|default/primary/success/info/warning/danger|default
+round|是否圆角按钮|Boolean|true/false|false
+circle|是否圆形按钮|Boolean|true/false|false
+outline|是否为朴素按钮|Boolean|true/false|false
+icon|图标类名|String|-|-
+disabled|是否禁用按钮|Boolean|true/false|false
+loading|是否开启加载状态|Boolean|true|false
+### 事件
+事件名称|说明|回调参数|-|-
+:---|:---|:---|:---|:---
+onClick|点击事件|-|-
+
 更多组件，敬请期待...
