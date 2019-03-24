@@ -37,7 +37,7 @@
     <ayu-button type="primary" circle><ayu-icon iconClass="edit"></ayu-icon></ayu-button>
     <ayu-button type="success" circle><ayu-icon iconClass="check"></ayu-icon></ayu-button>
     <ayu-button type="info" circle><ayu-icon iconClass="message"></ayu-icon></ayu-button>
-    <ayu-button type="warning" circle><ayu-icon iconClass="star"></ayu-icon></ayu-button>
+    <ayu-button type="warning" circle><ayu-icon iconClass="star-off"></ayu-icon></ayu-button>
     <ayu-button type="danger" circle><ayu-icon iconClass="delete"></ayu-icon></ayu-button>
 <p>加载按钮</p>
     <ayu-button loading type="primary">加载按钮</ayu-button>

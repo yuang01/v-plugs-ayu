@@ -1,4 +1,5 @@
 import Vue from "vue"
+import '../icon/iconfont.js'
 import ayuFloatinput from "./FloatInput"
 import ayuPagination from "./Pagination"
 import ayuSelect from "./Select";

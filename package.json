@@ -1,6 +1,6 @@
 {
   "name": "v-plugs-ayu",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "private": false,
   "main": "./dist/personal-component.common.js",
   "license": "MIT",
