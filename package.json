@@ -1,20 +1,15 @@
 {
   "name": "v-plugs-ayu",
-  "version": "0.2.5",
+  "version": "0.2.6",
+  "description": "基于Vue.js的组件库",
+  "keyword": "v-plugs-ayu ayu v-plugs",
   "private": false,
-  "main": "./dist/personal-component.common.js",
+  "main": "lib/ayu.umd.min.js",
   "license": "MIT",
-  "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
-  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name personal-component ./src/components/index.js",
+    "lib": "vue-cli-service build --target lib --name ayu --dest lib packages/index.js",
     "lint": "vue-cli-service lint"
   },
   "homepage": "https://github.com/yuang01/v-plugs-ayu/tree/dev",

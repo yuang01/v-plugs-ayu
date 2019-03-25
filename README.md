@@ -6,8 +6,9 @@ npm install v-plugs-ayu --save
 ```
 在man.js中引入即可
 ``` javascript
-import "v-plugs-ayu/dist/personal-component.css";
-import "v-plugs-ayu";
+import 'v-plugs-ayu/lib/ayu.css'
+import ayu from 'v-plugs-ayu'
+Vue.use(ayu)
 ```
 ## FloatInput组件预览
 ![预览](https://yuang.site//images/myplug-floatinput.gif)
