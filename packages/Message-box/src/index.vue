@@ -74,6 +74,7 @@ export default {
         line-height: 1;
         font-weight: 400px;
         &:hover {
+          color: $color-primary;
           cursor: pointer;
         }
       }

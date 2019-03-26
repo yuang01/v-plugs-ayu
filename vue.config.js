@@ -20,5 +20,13 @@ module.exports = {
       // 修改它的选项...
       return options
     })
-  }
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        // 向全局sass样式传入共享的全局变量
+        data: `@import "./examples/style/variable.scss";`
+      }
+    }
+}
 }
