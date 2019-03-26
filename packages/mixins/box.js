@@ -1,7 +1,7 @@
 export default {
   data () {
     return {
-      visible: true,
+      visible: false,
     }
   },
   watch: {
@@ -13,6 +13,8 @@ export default {
     }
   },
   mounted() {
+    // 为了动画效果，所以动态改变visible的值
+    this.visible = true
     // 执行$mount加载该组件
     document.body.appendChild(this.$el);
   },

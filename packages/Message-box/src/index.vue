@@ -33,11 +33,6 @@ export default {
     cancelButtonText: { type: String, default: '取消'},
     showCloseBtn: { type: Boolean, default: true }
   },
-  data () {
-    return {
-      visible: true,
-    }
-  },
   methods: {
     handleClick(clickType) {
       // 传递点击类型，到时候通过option.onXXX判断
