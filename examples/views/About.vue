@@ -56,6 +56,7 @@
     <ayu-button type="danger" disabled>danger</ayu-button> -->
     <!-- <ayu-messagebox></ayu-messagebox> -->
     <ayu-button @click="showmessageBox()" type="info">点我</ayu-button>
+    <h2>{{msg}}</h2>
   </div>
 </template>
 <script>
@@ -64,6 +65,7 @@
     },
     data() {
       return {
+        msg: ''
       };
     },
     methods: {
@@ -82,13 +84,13 @@
           title: '我是标题',
           content: '我是内容',
           onConfirm: () => {
-            console.log('说点什么好呢？');
+            this.msg = '你点了确定';
           },
           onCancel: () => {
-            console.log('取消了哦');
+            this.msg = '取消了哦';
           },
           onClose: () => {
-            console.log('关闭了呢');
+            this.msg = '关闭了呢';
           }
         })
       }

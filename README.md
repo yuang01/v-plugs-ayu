@@ -135,4 +135,64 @@ loading|是否开启加载状态|Boolean|true|false
 :---|:---|:---|:---|:---
 onClick|点击事件|-|-
 
+## MessageBox组件
+![预览](https://github.com/yuang01/carousel/blob/gh-pages/images/messagebox.gif)
+页面中使用
+``` javascript
+<template>
+  <ayu-button type="primaty" @click="open">点击打开 Message Box</ayu-button>
+</template>
+
+<script>
+  export default {
+    methods: {
+      open() {
+        // 或者this.$alert()
+        this.$confirm({
+          title: '我是标题',
+          content: '我是内容',
+          onConfirm: () => {
+            this.msg = '你点了确定';
+          },
+          onCancel: () => {
+            this.msg = '取消了哦';
+          },
+          onClose: () => {
+            this.msg = '关闭了呢';
+          }
+        })
+      }
+    }
+  }
+</script>
+
+```
+### 参数
+参数|说明|类型|可选值|默认值
+:---|:---|:---|:---|:---
+title|标题|String|-|'标题'
+content|内容|String|-|'一段内容'
+confirmButtonText|确认按钮的文字|String|-|'确定'
+cancelButtonText|取消按钮的文字|String|-|'取消'
+showCloseBtn|是否显示关闭按钮|Boolean|true/false|true
+
+### 事件
+事件名称|说明|回调参数|-|-
+:---|:---|:---|:---|:---
+onConfirm|点击确定触发该事件|-|-
+onCancel|点击取消触发该事件|-|-
+onConfirm|点击关闭触发该事件|-|-
+
+## Icon组件
+页面中使用
+```
+<ayu-icon icon-class="loading"></ayu-icon>
+```
+### 参数
+参数|说明|类型|可选值|默认值
+:---|:---|:---|:---|:---
+icon-class|图标类名|String|-|-
+spin|是否让图标执行旋转动画|Boolean|-|-
+
+选取了几十种比较常见的图标类型，因为比较多，先暂时不一一列举出来，有时间再把图标的class展示出来，供选择使用。
 更多组件，敬请期待...
