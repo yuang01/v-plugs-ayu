@@ -3,9 +3,7 @@
   <div class="ayu-message-box_wrapper" v-if="visible">
     <div class="ayu-message-box">
       <div class="ayu-message-box_header">
-        <div class="ayu-message-box_title">
-          {{title}}
-        </div>
+        <div class="ayu-message-box_title">{{title}}</div>
         <div class="ayu-message-box_close" v-if="showCloseBtn" @click="handleClick('close')">
           ×
         </div>
@@ -59,12 +57,13 @@ export default {
   .ayu-message-box {
     display: flex;
     flex-direction: column;
-    min-width: 300px;
+    min-width: 400px;
     padding: 20px;
     background-color: #fff;
     .ayu-message-box_header {
       display: flex;
       justify-content: space-between;
+      padding: 0 0 10px 0;
       .ayu-message-box_title {
         font-size: 18px;
         line-height: 1;
