@@ -7,16 +7,16 @@
       <button 
         v-if="arrow !== 'never'" 
         v-show="arrow === 'always' || hover && activeIndex >= 0" 
-        type="button" 
+        type="button"
         class="ayu-carousel_arrow ayu-carousel_arrow--left" 
-        @click.stop="prev()">&lt;</button>
+        @click.stop="prev()"><ayu-icon icon-class="left"></ayu-icon></button>
     </transition>
     <transition name="carousel-arrow-right">
       <button
         v-if="arrow !== 'never'" 
         v-show="arrow === 'always' || hover && activeIndex >= 0" 
         type="button" class="ayu-carousel_arrow ayu-carousel_arrow--right" 
-        @click.stop="next()">&gt;</button>
+        @click.stop="next()"><ayu-icon icon-class="right"></ayu-icon></button>
     </transition>
     <ul class="ayu-carousel_indicators">
       <li class="ayu-carousel_indicator"

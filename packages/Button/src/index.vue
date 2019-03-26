@@ -10,19 +10,16 @@
         'is-circle': circle,
         'is-outline': outline,
       }
-    ]">
+    ]"
+    @click="event => !disabled && $emit('click', event)">
     <ayu-icon iconClass="loading" spin v-if="loading"></ayu-icon>
     <ayu-icon :iconClass="icon" v-if="icon && !loading"></ayu-icon>
     <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
 <script>
-// import ayuIcon from '@/components/Icon';
 export default {
   name: 'ayuButton',
-  components: {
-    // ayuIcon
-  },
   props: {
     size: {
       type: String,
@@ -78,11 +75,11 @@ export default {
     margin-left: 5px;
   }
   &:hover {
-    background-color: rgba(118,131,143,.1);
+    background-color: rgba(118, 131, 143, .1);
   }
   &:active {
     color: #76838f;
-    background-color: rgba(118,131,143,.3);
+    background-color: rgba(118, 131, 143, .3);
     border-color: #e4eaec;
   }
   &.is-disabled {
@@ -164,16 +161,16 @@ export default {
       @include outlineType(transparent, #3e8ef7, #f7f7f7, #0099b8);
     }
     &.ayu-button-success {
-       @include outlineType(transparent, #11c26d, #f7f7f7, #05a85c);
+      @include outlineType(transparent, #11c26d, #f7f7f7, #05a85c);
     }
     &.ayu-button-info {
-       @include outlineType(transparent, #0bb2d4, #f7f7f7, #0099b8);
+      @include outlineType(transparent, #0bb2d4, #f7f7f7, #0099b8);
     }
     &.ayu-button-warning {
-       @include outlineType(transparent, #eb6709, #f7f7f7, #e79857);
+      @include outlineType(transparent, #eb6709, #f7f7f7, #e79857);
     }
     &.ayu-button-danger {
-       @include outlineType(transparent, #ff4c52, #f7f7f7, #f2353c);
+      @include outlineType(transparent, #ff4c52, #f7f7f7, #f2353c);
     }
   }
 }
