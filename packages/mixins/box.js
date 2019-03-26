@@ -8,7 +8,9 @@ export default {
     visible(val) {
       if (!val) {
         // 动画结束后注销该组件
-        this.$el.addEventListener('transitionend', this.destroyElement)
+        this.$nextTick(() => {
+          this.$el.addEventListener('transitionend', this.destroyElement)
+        })
       }
     }
   },
