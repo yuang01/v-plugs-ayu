@@ -5,7 +5,7 @@
       <div class="ayu-message-box_header">
         <div class="ayu-message-box_title">{{title}}</div>
         <div class="ayu-message-box_close" v-if="showCloseBtn" @click="handleClick('close')">
-          ×
+          <ayu-icon icon-class="close"></ayu-icon>
         </div>
       </div>
       <div class="ayu-message-box_content" v-html="content"></div>
