@@ -1,4 +1,5 @@
 <template>
+<transition name="fade">
   <div class="ayu-message-box_wrapper" v-if="visible">
     <div class="ayu-message-box">
       <div class="ayu-message-box_header">
@@ -16,6 +17,7 @@
       </div>
     </div>
   </div>
+</transition>
 </template>
 
 <script>
