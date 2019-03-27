@@ -22,6 +22,7 @@ module.exports = {
     })
   },
   css: {
+    extract: false,
     loaderOptions: {
       sass: {
         // 向全局sass样式传入共享的全局变量
