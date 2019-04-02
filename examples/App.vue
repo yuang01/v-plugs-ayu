@@ -1,12 +1,192 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div class="main-header">
+      <div class="main-header-logo">
+        <!-- <img src="./logo.png"
+          alt="logo"> -->
+      </div>
+      <div class="main-header-title">Ayu-UI</div>
+      <ul class="main-header-nav">
+        <li class="active">组件</li>
+      </ul>
     </div>
-    <router-view class="markdown" />
+    
+    <div class="main-">
+      <div class="main--left">
+        <ul>
+          <li>
+            <router-link to="/test">test 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/button">button 组件</router-link>
+          </li>
+        </ul>
+      </div>
+      <div class="main--right">
+        <router-view class="markdown"></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Microsoft YaHei;
+}
+.router-link-active {
+  color: #3e8ef7 !important;
+  background-color: #eeffde !important;
+  border-right: 3px solid #3e8ef7 !important;
+}
+#app {
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+#app .main-header {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 2px 8px #f0f1f2;
+  box-shadow: 0 2px 8px #f0f1f2;
+  position: relative;
+  z-index: 10;
+  height: 65px;
+  color: #444;
+}
+#app .main-header .main-header-logo {
+  height: 100%;
+  float: left;
+  margin-left: 40px;
+  position: absolute;
+}
+#app .main-header .main-header-logo img {
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#app .main-header .main-header-title {
+  height: 65px;
+  line-height: 65px;
+  font-size: 25px;
+  display: inline-block;
+  padding-left: 75px;
+  font-weight: bold;
+}
+#app .main-header .main-header-nav {
+  margin: 0;
+  padding: 0;
+  float: right;
+  height: 100%;
+  background: transparent;
+  margin-right: 160px;
+}
+#app .main-header .main-header-nav li {
+  list-style: none;
+  color: #314659;
+  height: 100%;
+  line-height: 65px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 72px;
+  border-top: 2px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  float: left;
+  border-bottom: 3px solid #fff;
+  -webkit-transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+    border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+    border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#app .main-header .main-header-nav li.active {
+  color: #3e8ef7;
+  border-bottom: 3px solid #3e8ef7;
+}
+#app .main- {
+  position: relative;
+  padding: 40px 0 0;
+  margin-left: 0;
+  margin-right: 0;
+  height: auto;
+  zoom: 1;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#app .main- .main--left {
+  float: left;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+#app .main- .main--left ul {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+}
+#app .main- .main--left ul li {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+#app .main- .main--left ul li a {
+  font-size: 16px;
+  color: #333;
+  line-height: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 4px 25px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  font-weight: 700;
+  border-right: 1px solid #e8e8e8;
+}
+#app .main- .main--left ul li a:hover {
+  color: #3e8ef7;
+}
+#app .main- .main--left ul li.main--link-group {
+  height: auto;
+}
+#app .main- .main--left ul li.main--link-group a:hover {
+  color: #333;
+  cursor: default;
+}
+#app .main- .main--left ul li.main--link-group ul a {
+  display: block;
+  height: 40px;
+  color: #444;
+  line-height: 40px;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 400;
+}
+#app .main- .main--left ul li.main--link-group ul a:hover {
+  color: #3e8ef7;
+  cursor: pointer;
+}
+#app .main- .main--right {
+  padding: 0 84px 140px 64px;
+  min-height: 500px;
+  overflow: hidden;
+}
+#app .main- .main--right a {
+  color: #3e8ef7;
+  text-decoration: none;
+}
 .markdown h1 {
   color: #0d1a26;
   font-weight: 500;
