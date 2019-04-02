@@ -14,7 +14,10 @@
   },
   "homepage": "https://github.com/yuang01/v-plugs-ayu/tree/dev",
   "dependencies": {
+    "markdown-it": "^8.4.2",
+    "markdown-it-container": "^2.0.0",
     "vue": "^2.5.17",
+    "vue-markdown-loader": "^2.4.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },

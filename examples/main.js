@@ -2,6 +2,9 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import DemoBlock from './components/demo-block.vue'
+Vue.component('demo-block', DemoBlock)
+import 'highlight.js/styles/github.css';
 // 导入组件库
 import ayu from './../packages/index';
 // 注册组件库
