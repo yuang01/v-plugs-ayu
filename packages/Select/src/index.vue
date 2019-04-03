@@ -39,7 +39,7 @@
           </template>
         </template>
       </div>
-      <span class="arrow" :class="{'rotated': isOpen}">&gt;</span>
+      <span class="arrow" :class="{'rotated': isOpen}"><ayu-icon icon-class="down"/></span>
       <div class="select-dropdown" v-show="isOpen">
         <slot></slot>
       </div>
@@ -131,7 +131,7 @@ export default {
   &:focus {
     text-overflow: ellipsis;
     border: 1px solid #209cee;
-    box-shadow: 0 0 5px 0 rgba(32, 156, 238, 0.5);
+    box-shadow: 0 0 5px 0 rgba(62, 142, 247, 0.8);
   }
 
   &.is-disabled {
@@ -175,18 +175,17 @@ export default {
   .arrow {
     position: absolute;
     display: block;
-    right: 0;
+    right: 5px;
     bottom: 0;
     width: 1em;
     font-size: 1.2em;
     font-weight: 600;
     color: #ccc;
-    transform:  rotate(90deg);
     transform-origin: center center;
     transition: transform .3s;
   }
   .rotated {
-    transform: rotate(270deg) translate(5px,-3px);
+    transform: rotate(180deg);
   }
 
   .select-dropdown {

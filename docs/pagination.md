@@ -91,3 +91,25 @@ export default {
 </script>
 ```
 :::
+
+### Attributes
+参数|说明|类型|可选值|默认值
+:---|:---|:---|:---|:---
+showTotal|显示总条数|boolean|true、false|false
+showJumper|显示前往多少页的input|boolean|true、false|false
+page-size|每页显示条目个数，支持 .sync 修饰符|number|-|10
+total|总条目数|number|-|-
+curpage|当前页数，支持 .sync 修饰符|number|-|1
+pagination-size|组件大小|string|pagination-sm、pagination-lg|-
+bgc|组件颜色|string|任意颜色值|#3e8ef7
+prevText|上一页文字|string|任意|&lt;(向左箭头)
+nextText|下一页文字|string|任意|&gt;(向右箭头)
+disabled|是否禁用|boolean|true、false|false
+
+### Events
+事件名称|说明|回调参数|-|-
+:---|:---|:---|:---|:---
+size-change|pageSize 改变时会触发|每页条数|-|-
+current-change|curpage 改变时会触发|当前页|-|-
+prev-click|用户点击上一页按钮改变当前页后触发|当前页|-|-
+next-click|用户点击下一页按钮改变当前页后触发|当前页|-|-

@@ -5,7 +5,7 @@ import Home from "./views/Home.vue";
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes: [
     {
@@ -32,6 +32,26 @@ export default new Router({
           path: '/pagination',
           name: 'pagination',
           component: () => import( "../docs/pagination.md")
+        },
+        {
+          path: '/select',
+          name: 'select',
+          component: () => import( "../docs/select.md")
+        },
+        {
+          path: '/carousel',
+          name: 'select',
+          component: () => import( "../docs/carousel.md")
+        },
+        {
+          path: '/messageBox',
+          name: 'messageBox',
+          component: () => import( "../docs/messageBox.md")
+        },
+        {
+          path: '/icon',
+          name: 'icon',
+          component: () => import( "../docs/icon.md")
         }
       ]
     },

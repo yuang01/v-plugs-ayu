@@ -2,12 +2,22 @@
   <div>
     <div class="main-header">
       <div class="main-header-logo">
-        <!-- <img src="./logo.png"
-          alt="logo"> -->
+        <img src="../../assets/ayu.png"
+          alt="logo">
       </div>
-      <div class="main-header-title">Ayu-UI</div>
+      <div class="main-header-title"><router-link to="/">Ayu-UI</router-link></div>
       <ul class="main-header-nav">
         <li class="active">组件</li>
+        <li>
+          <a href='https://github.com/yuang01/v-plugs-ayu' target="_blank">
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href='http://yuang.site' target="_blank">
+            博客
+          </a>
+        </li>
       </ul>
     </div>
     
@@ -22,6 +32,18 @@
           </li>
           <li>
             <router-link to="/pagination">pagination 分页</router-link>
+          </li>
+          <li>
+            <router-link to="/select">select 选择器</router-link>
+          </li>
+          <li>
+            <router-link to="/carousel">carousel 幻灯片</router-link>
+          </li>
+          <li>
+            <router-link to="/messageBox">messageBox 弹框</router-link>
+          </li>
+          <li>
+            <router-link to="/icon">icon 图标</router-link>
           </li>
         </ul>
       </div>
@@ -78,6 +100,12 @@
     display: inline-block;
     padding-left: 75px;
     font-weight: bold;
+    a {
+      color: #000!important;
+      border: 0!important;
+      background-color: transparent!important;
+      text-decoration: none;
+    }
   }
   #app .main-header .main-header-nav {
     margin: 0;
@@ -105,6 +133,10 @@
       border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
       border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #app .main-header .main-header-nav li a {
+    color: #000;
+    text-decoration: none;
   }
   #app .main-header .main-header-nav li.active {
     color: #3e8ef7;

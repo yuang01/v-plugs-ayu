@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <div class="home--panel">
-      <img src="../assets/logo.png" alt="" class="logo">
+      <div class="home--describe">
+        <p>船新版本，只需体验三番钟，你就会和我一样爱上这款插件，组件和文档正在编写和修改中...</p>
+      </div>
+      <img src="../assets/ayu.png" alt="" class="logo">
       <div class="home--btns">
         <router-link to='/button'>
           <span>开始使用</span>
@@ -19,6 +22,9 @@
 
 <script>
 export default {
+  data() {
+    return {}
+  }
 }
 </script>
 
@@ -37,9 +43,15 @@ export default {
     text-align: center;
     .logo {
       width: 400px;
-      height: 78px;
+      height: 200px;
       path {
         fill: #174a6e;
+      }
+    }
+    .home--describe {
+      p {
+        font-size: 12px;
+        font-weight: 400;
       }
     }
   }

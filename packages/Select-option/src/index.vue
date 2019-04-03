@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'AyuSelectItem',
+  name: 'AyuOption',
   props: {
     value: { type: [Object, String, Number], required: true },
     label: { type: String },
