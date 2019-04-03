@@ -96,7 +96,7 @@
 |disabled|是否禁用按钮|Boolean|true/false|false
 |loading|是否开启加载状态|Boolean|true|false
 
-<style>
+<style scoped>
 .ayu-button {
   margin-right: 5px;
 }
