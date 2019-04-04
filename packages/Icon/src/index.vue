@@ -1,5 +1,5 @@
 <template>
-  <svg class="ayu-icon" aria-hidden="true" :class="{'is-spin': spin}" @click.stop="event => $emit('click', event)">
+  <svg class="ayu-icon" aria-hidden="true" :class="{'is-spin': spin}">
     <use :xlink:href="iconName"></use>
   </svg>
 </template>

@@ -164,7 +164,7 @@ export default {
     jumpPage(id) {
       let val = parseInt(id);
       let p = /[^\d]/g; // 如果用户输入的字符串中有除了数字以外的其他字符，则视为无效
-      if (val > this.pages || val <= 0 || val === this.currentPage || isNaN(val) || p.test(id)) {
+      if (val > this.pages || val <= 0 || isNaN(val) || p.test(id)) {
         this.$refs.ayuInput.value = this.curpage;
         return;
       }

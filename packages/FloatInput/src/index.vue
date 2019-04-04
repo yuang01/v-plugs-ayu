@@ -10,8 +10,7 @@
     ref="input">
     <label class="input_placeholder" ref="inputPlaceholder" :class="{'toTop': this.value!== ''}">{{placeholder}}</label>
     <transition name="move">
-      <ayu-icon icon-class="close" class="clean" @click="cleanText" v-if="this.value !== '' " />
-      <!-- <span class="clean" @click="cleanText" v-if="this.value !== '' ">x</span> -->
+      <ayu-icon icon-class="close" class="clean" @click.native="cleanText" v-if="this.value !== '' " />
     </transition>
   </div>
 </template>
