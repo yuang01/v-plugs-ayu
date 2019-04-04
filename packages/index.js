@@ -12,6 +12,7 @@ import Pagination from './Pagination'
 import Select from './Select'
 import SelectItem from './Select-option'
 import MessageBox from './Message-box'
+import HoverTip from './Hover-tip'
 
 // 存储组件列表
 const components = [
@@ -23,6 +24,7 @@ const components = [
   Pagination,
   Select,
   SelectItem,
+  HoverTip
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
@@ -52,5 +54,6 @@ export default {
   Pagination,
   Select,
   SelectItem,
-  MessageBox
+  MessageBox,
+  HoverTip
 }
