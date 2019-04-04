@@ -1,10 +1,5 @@
 ## MessageBox 弹框
 模拟系统的消息提示框而实现的一套模态对话框组件，用于消息提示、确认消息和提交内容。
-
-### 消息提示
-:::demo
-``` html
-<ayu-button @click="open()" type="primary">打开弹框</ayu-button>
 <script>
 export default {
   methods: {
@@ -32,6 +27,25 @@ export default {
         }
       })
     }
+  }
+}
+</script>
+### 消息提示
+:::demo
+``` html
+<ayu-button @click="open()" type="primary">打开弹框</ayu-button>
+<script>
+export default {
+  methods: {
+    open() {
+      this.$alert({
+        title: '我是标题',
+        content: '我是内容',
+        onConfirm: () => {
+          alert('你点了确定哦');
+        }
+      })
+    },
   }
 }
 </script>

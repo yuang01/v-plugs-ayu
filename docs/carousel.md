@@ -1,7 +1,7 @@
 ## Carousel 幻灯片
 在有限空间内，循环播放同一类型的图片、文字等内容
 
-### 基础用法
+<!-- ### 基础用法
 :::demo
 ``` html
 <ayu-carousel height="300px" arrow="always">
@@ -28,7 +28,7 @@ export default {
   }
 </style>
 ```
-:::
+::: -->
 
 ### 滚动轮播
 :::demo

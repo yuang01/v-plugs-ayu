@@ -121,6 +121,7 @@ export default {
     },
     pauseTimer() {
       clearInterval(this.timer);
+      this.timer = null;
     },
     handleMouseEnter() {
       this.hover = true;
