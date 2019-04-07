@@ -45,6 +45,9 @@
           <li>
             <router-link to="/icon">icon 图标</router-link>
           </li>
+          <li>
+            <router-link to="/hoverTip">hoverTip 提示</router-link>
+          </li>
         </ul>
       </div>
       <div class="main--right">

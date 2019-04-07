@@ -52,6 +52,11 @@ export default new Router({
           path: '/icon',
           name: 'icon',
           component: () => import( "../docs/icon.md")
+        },
+        {
+          path: '/hoverTip',
+          name: 'hoverTip',
+          component: () => import( "../docs/hoverTip.md")
         }
       ]
     },

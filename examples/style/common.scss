@@ -4,3 +4,13 @@
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
+
+.fade-in-linear-enter-active {
+  transition: opacity 0.2s linear;
+}
+.fade-in-linear-leave-active {
+  transition: opacity 0.4s linear;
+}
+.fade-in-linear-enter, .fade-in-linear-leave-to {
+  opacity: 0;
+}
