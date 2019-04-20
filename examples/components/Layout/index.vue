@@ -48,6 +48,9 @@
           <li>
             <router-link to="/hoverTip">hoverTip 提示</router-link>
           </li>
+          <li>
+            <router-link to="/input">input 输入框</router-link>
+          </li>
         </ul>
       </div>
       <div class="main--right">
