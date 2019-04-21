@@ -102,6 +102,25 @@
 </div>
 ```
 :::
+
+### Attributes
+|参数|说明|类型|可选值|默认值
+|:---|:---|:---|:---|:---
+|type|类型|String|text/textarea 和其他 原生 input 的 type 值|text
+|value(v-model)|值|String/Number|-|-
+|prefix-icon|输入框头部图标|String|-|-
+|suffix-icon|输入框尾部图标|String|-|-
+|round|是否为圆角状态|Boolean|true/false|false
+|size|输入框大小|String|large/medium/small/mini|medium
+|disabled|是否禁用|Boolean|true/false|false
+|clearable|是否可清空|Boolean|true|false
+
+### Events
+事件名称|说明|回调参数
+:---|:---|:---
+change|在 Input 值改变时触发|(event: Event)
+focus|在 Input 获得焦点时触发|(event: Event)
+blur|	在 Input 失去焦点时触发|(event: Event)
 <script>
 export default {
   data() {
