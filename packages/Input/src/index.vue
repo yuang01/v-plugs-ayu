@@ -41,7 +41,7 @@
         <slot name="append"></slot>
       </div>
       <ayu-icon v-if="showClear" icon-class="circle-close" class="input-icon ayu-input__clear" @click.native="clear()"/>
-      <span v-if="suffixIcon || this.$slots.suffix" class="input-icon">
+      <span v-if="(suffixIcon || this.$slots.suffix) && !showClear" class="input-icon">
         <slot name="suffix"></slot>
         <ayu-icon v-if="suffixIcon" :icon-class="suffixIcon"></ayu-icon>
       </span>
