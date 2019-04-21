@@ -154,7 +154,6 @@ export default {
   line-height: 36px;
   outline: none;
   font-size: inherit;
-  // box-shadow --> transition all;
   transition: border-color .2s cubic-bezier(.645,.045,.355,1);
   border: 1px solid #dcdfe6;
   box-sizing: border-box;
@@ -163,7 +162,6 @@ export default {
   &:focus {
     outline: none;
     border: 1px solid $color-primary;
-    // box-shadow: 0 0 5px 0 rgba($color-primary, 0.5);
   }
   &:disabled {
     background-color: rgba($color-disabled, 0.25);
@@ -192,6 +190,7 @@ export default {
 }
 // input
 .ayu-input {
+  font-size: 14px;
   .ayu-input__inner {
     @include base;
   }
@@ -203,7 +202,7 @@ export default {
     top: 0;
     bottom: 0;
     margin: auto auto;
-    height: 100%;
+    height: 36px;
     line-height: 36px;
     color: $color-disabled;
   }
@@ -242,6 +241,7 @@ export default {
   .ayu-input__append {
     padding: 0 20px;
     line-height: 36px;
+    font-size: inherit;
     border: 1px solid #dcdfe6;
     background-color: #f5f7fa;
     color: #909399;
@@ -264,6 +264,7 @@ export default {
   .input-icon {
     line-height: 32px;
     height: 32px;
+    font-size: 13px;
   }
 }
 .ayu-input.ayu-input--mini {
@@ -273,6 +274,7 @@ export default {
   .input-icon {
     line-height: 28px;
     height: 28px;
+    font-size: 12px;
   }
 }
 </style>

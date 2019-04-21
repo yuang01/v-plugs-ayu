@@ -52,6 +52,13 @@
 ```
 :::
 
+### 圆角状态
+::: demo 通过 `round` 属性即可为input带上圆角
+``` html
+<ayu-input placeholder="请输入内容" v-model="inputValue" round />
+```
+:::
+
 ### 文本域
 ::: demo 用于输入多行文本信息，通过将 `type` 属性的值指定为 textarea。
 ``` html
@@ -88,13 +95,10 @@
 ::: demo 可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 large、small 和 mini 三种尺寸。
 ``` html
 <div class="demo-input-size">
-  <ayu-input v-model="inputValue" size="large" placeholder="标题" prefixIcon="search" suffixIcon="date"></ayu-input>
-
-  <ayu-input v-model="inputValue" placeholder="标题" prefixIcon="search" suffixIcon="date"></ayu-input>
-
-  <ayu-input v-model="inputValue" size="small" placeholder="标题" prefixIcon="search" suffixIcon="date"></ayu-input>
-
-  <ayu-input v-model="inputValue" size="mini" placeholder="标题" prefixIcon="search" suffixIcon="date"></ayu-input>
+  <ayu-input v-model="inputValue" size="large" placeholder="标题" suffixIcon="date"></ayu-input>
+  <ayu-input v-model="inputValue" placeholder="标题" suffixIcon="date"></ayu-input>
+  <ayu-input v-model="inputValue" size="small" placeholder="标题" suffixIcon="date"></ayu-input>
+  <ayu-input v-model="inputValue" size="mini" placeholder="标题" suffixIcon="date"></ayu-input>
 </div>
 ```
 :::

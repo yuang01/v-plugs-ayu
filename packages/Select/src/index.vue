@@ -18,19 +18,13 @@
           <template v-else-if="!collapseTags">
             <span v-for="value in selectItems" :key="value.key" class="select__item_tag c-size-s">
               {{ value.label }}
-              <span
-                class="delete-btn"
-                @click.stop="handleDelete(value)"
-              >×</span>
+              <ayu-icon icon-class="close" class="delete-btn" @click.native.stop="handleDelete(value)" />
             </span>
           </template>
           <template v-else>
             <span class="select__item_tag c-size-s">
               {{ selectItems[0].label }}
-              <span
-                class="delete-btn"
-                @click.stop="handleDelete(selectItems[0])"
-              >×</span>
+              <ayu-icon icon-class="close" class="delete-btn" @click.native.stop="handleDelete(selectItems[0])"" />
             </span>
             <span v-if="restValueNum" class="select__item_tag c-size-s c-bold">
               +
@@ -131,7 +125,6 @@ export default {
   &:focus {
     text-overflow: ellipsis;
     border: 1px solid #209cee;
-    box-shadow: 0 0 5px 0 rgba(62, 142, 247, 0.8);
   }
 
   &.is-disabled {
@@ -176,7 +169,8 @@ export default {
     position: absolute;
     display: block;
     right: 5px;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 1em;
     font-size: 1.2em;
     font-weight: 600;
@@ -185,7 +179,7 @@ export default {
     transition: transform .3s;
   }
   .rotated {
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
   }
 
   .select-dropdown {
