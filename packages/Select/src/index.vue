@@ -24,7 +24,7 @@
           <template v-else>
             <span class="select__item_tag c-size-s">
               {{ selectItems[0].label }}
-              <ayu-icon icon-class="close" class="delete-btn" @click.native.stop="handleDelete(selectItems[0])"" />
+              <ayu-icon icon-class="close" class="delete-btn" @click.native.stop="handleDelete(selectItems[0])" />
             </span>
             <span v-if="restValueNum" class="select__item_tag c-size-s c-bold">
               +
