@@ -57,6 +57,16 @@ export default new Router({
           path: '/hoverTip',
           name: 'hoverTip',
           component: () => import( "../docs/hoverTip.md")
+        },
+        {
+          path: '/input',
+          name: 'input',
+          component: () => import( "../docs/input.md")
+        },
+        {
+          path: '/message',
+          name: 'message',
+          component: () => import( "../docs/message.md")
         }
       ]
     },

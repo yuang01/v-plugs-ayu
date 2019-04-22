@@ -24,29 +24,8 @@
     <div class="main-">
       <div class="main--left">
         <ul>
-          <li>
-            <router-link to="/button">button 按钮</router-link>
-          </li>
-          <li>
-            <router-link to="/floatinput">floatinput 浮动输入框</router-link>
-          </li>
-          <li>
-            <router-link to="/pagination">pagination 分页</router-link>
-          </li>
-          <li>
-            <router-link to="/select">select 选择器</router-link>
-          </li>
-          <li>
-            <router-link to="/carousel">carousel 幻灯片</router-link>
-          </li>
-          <li>
-            <router-link to="/messageBox">messageBox 弹框</router-link>
-          </li>
-          <li>
-            <router-link to="/icon">icon 图标</router-link>
-          </li>
-          <li>
-            <router-link to="/hoverTip">hoverTip 提示</router-link>
+          <li v-for="item in menuPath" :key="item.path">
+            <router-link :to="item.path">{{item.name}}</router-link>
           </li>
         </ul>
       </div>
@@ -56,7 +35,26 @@
     </div>
   </div>
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      menuPath: [
+        { path: '/button', name: 'button 按钮' },
+        { path: '/floatinput', name: 'floatinput 浮动输入框' },
+        { path: '/pagination', name: 'pagination 分页' },
+        { path: '/select', name: 'select 选择器' },
+        { path: '/carousel', name: 'carousel 幻灯片' },
+        { path: '/messageBox', name: 'messageBox 弹框' },
+        { path: '/icon', name: 'icon 图标' },
+        { path: '/hoverTip', name: 'hoverTip 提示' },
+        { path: '/input', name: 'input 输入框' },
+        { path: '/message', name: 'message 消息提示' },
+      ]
+    }
+  }
+}
+</script>
 <style lang="scss">
   body {
     margin: 0;

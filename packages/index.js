@@ -13,6 +13,8 @@ import Select from './Select'
 import SelectItem from './Select-option'
 import MessageBox from './Message-box'
 import HoverTip from './Hover-tip'
+import Input from './Input'
+import Message from './Message'
 
 // 存储组件列表
 const components = [
@@ -24,7 +26,8 @@ const components = [
   Pagination,
   Select,
   SelectItem,
-  HoverTip
+  HoverTip,
+  Input
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
@@ -35,6 +38,8 @@ const install = function (Vue) {
   components.map(component => Vue.component(component.name, component))
   Vue.prototype.$alert = MessageBox.alert
   Vue.prototype.$confirm = MessageBox.confirm
+  Vue.prototype.$message = Message.$message
+  Vue.prototype.$closeMessage = Message.$closeMessage
 }
 
 // 判断是否是直接引入文件
@@ -55,5 +60,7 @@ export default {
   Select,
   SelectItem,
   MessageBox,
-  HoverTip
+  HoverTip,
+  Input,
+  Message
 }

@@ -90,8 +90,8 @@ cancelButtonText|取消按钮的文字|String|-|'取消'
 showCloseBtn|是否显示关闭按钮|Boolean|true/false|true
 
 ### Events
-事件名称|说明|回调参数|-|-
-:---|:---|:---|:---|:---
-onConfirm|点击确定触发该事件|-|-
-onCancel|点击取消触发该事件|-|-
-onConfirm|点击关闭触发该事件|-|-
+事件名称|说明|回调参数
+:---|:---|:---
+onConfirm|点击确定触发该事件
+onCancel|点击取消触发该事件
+onConfirm|点击关闭触发该事件
