@@ -1,10 +1,3 @@
-<!-- <ayu-input v-model="inputValue" @change="changeinput" placeholder="标题" prefixIcon="search" suffixIcon="date" style="width:200px;margin-right: 5px;float: left;"></ayu-input>
-
-<ayu-input v-model="inputValue" size="medium" @change="changeinput" placeholder="标题" prefixIcon="search" suffixIcon="date" style="width:200px;margin-right: 5px;float: left;"></ayu-input>
-
-<ayu-input v-model="inputValue" size="small" @change="changeinput" placeholder="标题" prefixIcon="search" suffixIcon="date" style="width:200px;margin-right: 5px;float: left;"></ayu-input>
-
-<ayu-input v-model="inputValue" size="mini" @change="changeinput" placeholder="标题" prefixIcon="search" suffixIcon="date" style="width:200px;margin-right: 5px;float: left;"></ayu-input> -->
 ## Input 输入框
 通过鼠标或键盘输入字符
 ### 基础用法

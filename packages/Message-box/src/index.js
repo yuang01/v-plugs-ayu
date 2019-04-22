@@ -10,10 +10,6 @@ function generateInstance(options, type = 'alert') {
     }),
   }).$mount(document.createElement('div'))
 
-  instance.onConfirm = options.onConfirm
-  instance.onCancel = options.onCancel
-  instance.onClose = options.onClose
-
   if (typeof options.onConfirm === 'function') {
     instance.onConfirm = options.onConfirm
     instance.$on('confirm', function () {
