@@ -16,6 +16,7 @@ function generateInstance(options) {
   }
 
   let id = `message${index++}`;
+  instance.id = id;
   // 执行onClose事件
   instance.$once('messageClose', function () {
     const curInstance = this;
@@ -32,8 +33,8 @@ Message.$message = (options = {}) => {
   if (instance) instance.$destroy();
   instance = generateInstance(options);
 }
-Message.$closeMessage = (options = {}) => {
+Message.$closeMessage = () => {
   if (instance) instance.$destroy();
 }
 export default Message
-export { MessagMessageeBox }
+export { Message }
