@@ -62,6 +62,11 @@ export default new Router({
           path: '/input',
           name: 'input',
           component: () => import( "../docs/input.md")
+        },
+        {
+          path: '/message',
+          name: 'message',
+          component: () => import( "../docs/message.md")
         }
       ]
     },

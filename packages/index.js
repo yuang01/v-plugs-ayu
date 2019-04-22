@@ -14,6 +14,7 @@ import SelectItem from './Select-option'
 import MessageBox from './Message-box'
 import HoverTip from './Hover-tip'
 import Input from './Input'
+import Message from './Message'
 
 // 存储组件列表
 const components = [
@@ -37,6 +38,8 @@ const install = function (Vue) {
   components.map(component => Vue.component(component.name, component))
   Vue.prototype.$alert = MessageBox.alert
   Vue.prototype.$confirm = MessageBox.confirm
+  Vue.prototype.$message = Message.$message
+  Vue.prototype.$closeMessage = Message.$closeMessage
 }
 
 // 判断是否是直接引入文件
@@ -58,5 +61,6 @@ export default {
   SelectItem,
   MessageBox,
   HoverTip,
-  Input
+  Input,
+  Message
 }
