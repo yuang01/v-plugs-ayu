@@ -15,6 +15,7 @@ import MessageBox from './Message-box'
 import HoverTip from './Hover-tip'
 import Input from './Input'
 import Message from './Message'
+import Notification from './Notification'
 
 // 存储组件列表
 const components = [
@@ -40,6 +41,7 @@ const install = function (Vue) {
   Vue.prototype.$confirm = MessageBox.confirm
   Vue.prototype.$message = Message.$message
   Vue.prototype.$closeMessage = Message.$closeMessage
+  Vue.prototype.$notify = Notification.$notify
 }
 
 // 判断是否是直接引入文件
@@ -62,5 +64,6 @@ export default {
   MessageBox,
   HoverTip,
   Input,
-  Message
+  Message,
+  Notification
 }

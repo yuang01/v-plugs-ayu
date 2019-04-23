@@ -67,6 +67,11 @@ export default new Router({
           path: '/message',
           name: 'message',
           component: () => import( "../docs/message.md")
+        },
+        {
+          path: '/notification',
+          name: 'notification',
+          component: () => import( "../docs/notification.md")
         }
       ]
     },
