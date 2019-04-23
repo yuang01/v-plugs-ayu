@@ -50,6 +50,7 @@ export default {
         { path: '/hoverTip', name: 'hoverTip 提示' },
         { path: '/input', name: 'input 输入框' },
         { path: '/message', name: 'message 消息提示' },
+        { path: '/notification', name: 'Notification 通知' },
       ]
     }
   }
