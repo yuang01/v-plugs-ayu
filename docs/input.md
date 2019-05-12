@@ -10,21 +10,21 @@
 ### 禁用状态
 ::: demo 通过 `disabled` 属性指定是否禁用 input 组件
 ``` html
-<ayu-input placeholder="请输入内容" v-model="inputValue" disabled />
+<ayu-input placeholder="请输入内容" v-model="inputValue2" disabled />
 ```
 :::
 
 ### 可清空
 ::: demo 通过 `clearable` 属性即可得到一个可清空的输入框
 ``` html
-<ayu-input placeholder="请输入内容" v-model="inputValue" clearable />
+<ayu-input placeholder="请输入内容" v-model="inputValue3" clearable />
 ```
 :::
 
 ### 密码框
 ::: demo 通过 `type` 属性即可选择普通input的type属性
 ``` html
-<ayu-input placeholder="请输入内容" v-model="inputValue" type="password" />
+<ayu-input placeholder="请输入内容" v-model="inputValue4" type="password" />
 ```
 :::
 
@@ -33,11 +33,11 @@
 ``` html
 <div class="demo-input">
   属性方式：
-  <ayu-input v-model="inputValue" placeholder="请输入内容" prefixIcon="search" suffixIcon="date"></ayu-input>
+  <ayu-input v-model="inputValue5" placeholder="请输入内容" prefixIcon="search" suffixIcon="date"></ayu-input>
 </div>
 <div class="demo-input">
   slot方式：
-  <ayu-input v-model="inputValue" placeholder="请输入内容">
+  <ayu-input v-model="inputValue6" placeholder="请输入内容">
     <ayu-icon slot="prefix" icon-class="search"></ayu-icon>
     <ayu-icon slot="suffix" icon-class="date"></ayu-icon>
   </ayu-input>
@@ -48,14 +48,14 @@
 ### 圆角状态
 ::: demo 通过 `round` 属性即可为input带上圆角
 ``` html
-<ayu-input placeholder="请输入内容" v-model="inputValue" round />
+<ayu-input placeholder="请输入内容" v-model="inputValue7" round />
 ```
 :::
 
 ### 文本域
 ::: demo 用于输入多行文本信息，通过将 `type` 属性的值指定为 textarea。
 ``` html
-<ayu-input placeholder="请输入内容" v-model="inputValue" type="textarea" />
+<ayu-input placeholder="请输入内容" v-model="inputValue8" type="textarea" />
 ```
 :::
 
@@ -64,19 +64,19 @@
 ::: demo 可通过 slot 来指定在 input 中前置或者后置内容。
 ``` html
 <div class="demo-input-pend">
-  <ayu-input placeholder="请输入内容" v-model="inputValue">
+  <ayu-input placeholder="请输入内容" v-model="inputValue9">
     <template slot="prepend">https://</template>
   </ayu-input>
 </div>
 
 <div class="demo-input-pend">
-  <ayu-input placeholder="请输入内容" v-model="inputValue">
+  <ayu-input placeholder="请输入内容" v-model="inputValue10">
     <template slot="append">.com</template>
   </ayu-input>
 </div>
 
 <div class="demo-input-pend">
-  <ayu-input placeholder="请输入内容" v-model="inputValue">
+  <ayu-input placeholder="请输入内容" v-model="inputValue11">
     <template slot="prepend">https://</template>
     <template slot="append">.com</template>
   </ayu-input>
@@ -88,10 +88,10 @@
 ::: demo 可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 large、small 和 mini 三种尺寸。
 ``` html
 <div class="demo-input-size">
-  <ayu-input v-model="inputValue" size="large" placeholder="标题" suffixIcon="date"></ayu-input>
-  <ayu-input v-model="inputValue" placeholder="标题" suffixIcon="date"></ayu-input>
-  <ayu-input v-model="inputValue" size="small" placeholder="标题" suffixIcon="date"></ayu-input>
-  <ayu-input v-model="inputValue" size="mini" placeholder="标题" suffixIcon="date"></ayu-input>
+  <ayu-input v-model="inputValue12" size="large" placeholder="标题" suffixIcon="date"></ayu-input>
+  <ayu-input v-model="inputValue13" placeholder="标题" suffixIcon="date"></ayu-input>
+  <ayu-input v-model="inputValue14" size="small" placeholder="标题" suffixIcon="date"></ayu-input>
+  <ayu-input v-model="inputValue15" size="mini" placeholder="标题" suffixIcon="date"></ayu-input>
 </div>
 ```
 :::
@@ -119,6 +119,20 @@ export default {
   data() {
     return {
       inputValue: '',
+      inputValue2: '',
+      inputValue3: '',
+      inputValue4: '',
+      inputValue5: '',
+      inputValue6: '',
+      inputValue7: '',
+      inputValue8: '',
+      inputValue9: '',
+      inputValue10: '',
+      inputValue11: '',
+      inputValue12: '',
+      inputValue13: '',
+      inputValue14: '',
+      inputValue15: '',
     }
   },
   methods: {

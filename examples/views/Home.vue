@@ -2,7 +2,6 @@
   <div class="home">
     <div class="home--panel">
       <div class="home--describe">
-        <p>船新版本，只需体验三番钟，你就会和我一样爱上这款插件，组件和文档正在编写和修改中...</p>
       </div>
       <img src="../assets/ayu.png" alt="" class="logo">
       <div class="home--btns">
@@ -84,6 +83,7 @@ export default {
     width: 40%;
     text-align: center;
     font-size: 14px;
+    font-weight: 400;
   }
 }
 </style>

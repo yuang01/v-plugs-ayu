@@ -7,11 +7,6 @@
   margin-right: 5px;
 }
 </style>
-::: demo Notification 组件提供通知功能，Ayu 注册了`$notify`方法，接收一个`options`字面量参数，在最简单的情况下，你可以设置`title`字段和`content`字段，用于设置通知的标题和正文。默认情况下，经过一段时间后 Notification 组件会自动关闭，但是通过设置`duration`或者`autoClose`，可以控制关闭的时间间隔，特别的是，如果`duration`设置为`0`，或者`autoClose`设置为`false`则不会自动关闭。注意：`duration`接收一个`Number`，单位为毫秒，默认为`4500`。
-``` html
-<ayu-button @click="open()">可自动关闭</ayu-button>
-<ayu-button @click="open1()">不会自动关闭</ayu-button>
-<ayu-button @click="open2()">不会自动关闭</ayu-button>
 <script>
 export default {
   methods: {
@@ -90,6 +85,37 @@ export default {
         content: '<strong>这是 <i>HTML</i> 片段</strong>'
       })
     }
+  }
+}
+</script>
+::: demo Notification 组件提供通知功能，Ayu 注册了`$notify`方法，接收一个`options`字面量参数，在最简单的情况下，你可以设置`title`字段和`content`字段，用于设置通知的标题和正文。默认情况下，经过一段时间后 Notification 组件会自动关闭，但是通过设置`duration`或者`autoClose`，可以控制关闭的时间间隔，特别的是，如果`duration`设置为`0`，或者`autoClose`设置为`false`则不会自动关闭。注意：`duration`接收一个`Number`，单位为毫秒，默认为`4500`。
+``` html
+<ayu-button @click="open()">可自动关闭</ayu-button>
+<ayu-button @click="open1()">不会自动关闭</ayu-button>
+<ayu-button @click="open2()">不会自动关闭</ayu-button>
+<script>
+export default {
+  methods: {
+    open() {
+      this.$notify({
+        title: '我是标题',
+        content: '你们好啊！哈哈哈哈'
+      })
+    },
+    open1() {
+      this.$notify({
+        title: '我是标题',
+        content: '你们好啊！哈哈哈哈',
+        duration: 0
+      })
+    },
+    open2() {
+      this.$notify({
+        title: '我是标题',
+        content: '你们好啊！哈哈哈哈',
+        autoClose: false
+      })
+    },
   }
 }
 </script>
