@@ -272,6 +272,10 @@ export default {
     color: #5e6d82;
     line-height: 1.5em;
   }
+  .markdown pre {
+    background-color: #f2f4f5;
+    padding: 18px 24px;
+  }
   // .markdown ul > li > p,
   // .markdown ol > li > p {
   //   margin: 0.2em 0;
