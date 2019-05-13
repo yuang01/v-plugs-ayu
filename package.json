@@ -1,0 +1,33 @@
+{
+  "name": "v-plugs-ayu",
+  "version": "0.3.5",
+  "description": "基于Vue.js的组件库",
+  "keyword": "v-plugs-ayu ayu v-plugs",
+  "private": false,
+  "main": "lib/ayu.umd.min.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --name ayu --dest lib packages/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "homepage": "https://github.com/yuang01/v-plugs-ayu/tree/dev",
+  "dependencies": {
+    "markdown-it": "^8.4.2",
+    "markdown-it-container": "^2.0.0",
+    "vue": "^2.5.17",
+    "vue-markdown-loader": "^2.4.1",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "@vue/eslint-config-prettier": "^3.0.3",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
