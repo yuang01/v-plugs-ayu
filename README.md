@@ -30,12 +30,3 @@ Vue.use(ayu)
 组件和文档正在编写和完善中，感谢您的关注和支持，谢谢。
 
 <a href="https://yuang01.github.io/v-plugs-ayu/dist/#/" target="_blank">文档</a> | <a href="https://yuang01.github.io/v-plugs-ayu/dist/#/" target="_blank">document</a>
-
-<style>
-.img-npm {
-  padding:20px 150px;
-}
-.desc {
-  margin-left: -50px;
-}
-</style>
