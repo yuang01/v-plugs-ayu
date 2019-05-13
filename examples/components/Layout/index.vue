@@ -2,10 +2,12 @@
   <div>
     <div class="main-header">
       <div class="main-header-logo">
-        <img src="../../assets/ayu.png"
-          alt="logo">
+        <router-link to="/">
+          <img src="../../assets/ayu.png"
+            alt="logo">
+        </router-link>
       </div>
-      <div class="main-header-title"><router-link to="/">Ayu-UI</router-link></div>
+      <div class="main-header-title"></div>
       <ul class="main-header-nav">
         <li class="active">组件</li>
         <li>
@@ -40,6 +42,7 @@ export default {
   data() {
     return {
       menuPath: [
+        { path: '/install', name: '安装' },
         { path: '/button', name: 'button 按钮' },
         { path: '/floatinput', name: 'floatinput 浮动输入框' },
         { path: '/pagination', name: 'pagination 分页' },
@@ -51,6 +54,7 @@ export default {
         { path: '/input', name: 'input 输入框' },
         { path: '/message', name: 'message 消息提示' },
         { path: '/notification', name: 'Notification 通知' },
+        { path: '/layout', name: 'Layout 布局' },
       ]
     }
   }
@@ -95,15 +99,23 @@ export default {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+  #app .main-header .main-header-logo {
+    .router-link-active {
+      border-right: 0px!important;
+    }
+    img {
+      transform: translateY(-50%) scale(1.5);
+    }
+  }
   #app .main-header .main-header-title {
     height: 65px;
     line-height: 65px;
-    font-size: 25px;
+    font-size: 18px;
     display: inline-block;
     padding-left: 75px;
     font-weight: bold;
     a {
-      color: #000!important;
+      color: #3e8ef7;
       border: 0!important;
       background-color: transparent!important;
       text-decoration: none;

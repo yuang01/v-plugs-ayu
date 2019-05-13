@@ -19,6 +19,11 @@ export default new Router({
       import(/* webpackChunkName: "about" */ "./components/Layout/index.vue"),
       children: [
         {
+          path: '/install',
+          name: 'install',
+          component: () => import( "../docs/install.md")
+        },
+        {
           path: '/button',
           name: 'button',
           component: () => import( "../docs/button.md")
@@ -72,7 +77,12 @@ export default new Router({
           path: '/notification',
           name: 'notification',
           component: () => import( "../docs/notification.md")
-        }
+        },
+        {
+          path: '/layout',
+          name: 'layout',
+          component: () => import( "../docs/layout.md")
+        },
       ]
     },
   ]

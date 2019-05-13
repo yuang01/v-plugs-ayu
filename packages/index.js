@@ -16,6 +16,8 @@ import HoverTip from './Hover-tip'
 import Input from './Input'
 import Message from './Message'
 import Notification from './Notification'
+import Row from './Row'
+import Col from './Col'
 
 // 存储组件列表
 const components = [
@@ -28,7 +30,9 @@ const components = [
   Select,
   SelectItem,
   HoverTip,
-  Input
+  Input,
+  Row,
+  Col
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
@@ -65,5 +69,7 @@ export default {
   HoverTip,
   Input,
   Message,
-  Notification
+  Notification,
+  Row,
+  Col
 }
