@@ -1,12 +1,13 @@
 # v-plugs-ayu
-<!-- [logo](./examples/assets/ayu.png) -->
+<center>
 <img src="./examples/assets/ayu.png">
-<div class="img-npm">
+</center> 
+<center>
 <img src="https://img.shields.io/npm/v/v-plugs-ayu.svg?color=success">
 <img src="https://img.shields.io/github/license/yuang01/v-plugs-ayu.svg">
 <img src="https://img.shields.io/npm/dt/v-plugs-ayu.svg">
 <p class="desc">一个基于vue.js的组件库 (A Component Library Based on vue.js)</p>
-</div>
+</center> 
 
 
 ## 安装
