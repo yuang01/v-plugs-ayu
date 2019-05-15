@@ -15,7 +15,7 @@
 ``` bash
 npm i v-plugs-ayu -S
 ```
-在man.js中引入即可
+在man.js中引入即可开始使用
 ``` javascript
 import ayu from 'v-plugs-ayu'
 Vue.use(ayu)
