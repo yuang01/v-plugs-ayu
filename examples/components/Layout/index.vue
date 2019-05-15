@@ -68,7 +68,6 @@ export default {
   }
   .router-link-active {
     color: #3e8ef7 !important;
-    background-color: #eeffde !important;
     border-right: 3px solid #3e8ef7 !important;
   }
   #app {
