@@ -32,7 +32,7 @@ Vue.use(ayu)
 <a href="https://yuang01.github.io/v-plugs-ayu/dist/#/" target="_blank">文档</a> | <a href="https://yuang01.github.io/v-plugs-ayu/dist/#/" target="_blank">document</a>
 
 ### Hello world
-通过 CDN 的方式我们可以很容易地使用 Ayu 写出一个 Hello world 页面
+通过 CDN 的方式我们可以很容易地使用 Ayu 写出一个 Hello world 页面,新建一个html页面,复制以下内容即可
 ``` html
 <!DOCTYPE html>
 <html lang="en">
