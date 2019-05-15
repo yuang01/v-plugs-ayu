@@ -46,7 +46,9 @@ npm i v-plugs-ayu -S
             title: '我是标题',
             content: '我是内容',
             onConfirm: () => {
-              alert('你点了确定哦');
+              this.$message({
+                content: '你点了确定哦'
+              })
             }
           })
         }
@@ -57,4 +59,12 @@ npm i v-plugs-ayu -S
 </body>
 
 </html>
+```
+## 快速上手
+在man.js中引入即可:
+``` javascript 
+
+import ayu from 'v-plugs-ayu'
+Vue.use(ayu)
+
 ```

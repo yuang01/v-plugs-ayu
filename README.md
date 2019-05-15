@@ -30,3 +30,47 @@ Vue.use(ayu)
 组件和文档正在编写和完善中，感谢您的关注和支持，谢谢。
 
 <a href="https://yuang01.github.io/v-plugs-ayu/dist/#/" target="_blank">文档</a> | <a href="https://yuang01.github.io/v-plugs-ayu/dist/#/" target="_blank">document</a>
+
+### Hello world
+通过 CDN 的方式我们可以很容易地使用 Ayu 写出一个 Hello world 页面
+``` html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ayu</title>
+  <style type="text/css">
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <ayu-button type="primary" @click="open()">点击我</ayu-button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        inputValue: ''
+      },
+      methods: {
+        open() {
+          this.$alert({
+            title: '我是标题',
+            content: '我是内容',
+            onConfirm: () => {
+              alert('你点了确定哦');
+            }
+          })
+        }
+      },
+      created() {}
+    })
+  </script>
+</body>
+
+</html>
+```
