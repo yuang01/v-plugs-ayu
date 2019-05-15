@@ -46,6 +46,11 @@ Vue.use(ayu)
 
 <body>
   <div id="app">
+    <ayu-carousel height="500px" type="slide">
+      <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
+        <img :src="item.src" alt="" style="width:100%;">
+      </ayu-carousel-item>
+    </ayu-carousel>
     <ayu-button type="primary" @click="open()">点击我</ayu-button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -54,7 +59,11 @@ Vue.use(ayu)
     var vm = new Vue({
       el: '#app',
       data: {
-        inputValue: ''
+        cardata: [
+          { src: 'https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+          { src: 'https://images.pexels.com/photos/1520145/pexels-photo-1520145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+          { src: 'https://images.pexels.com/photos/5946/books-yellow-book-reading.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+        ],
       },
       methods: {
         open() {
@@ -62,7 +71,9 @@ Vue.use(ayu)
             title: '我是标题',
             content: '我是内容',
             onConfirm: () => {
-              alert('你点了确定哦');
+              this.$message({
+                content: '你点了确定哦'
+              })
             }
           })
         }
