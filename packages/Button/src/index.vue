@@ -75,16 +75,20 @@ export default {
     margin-left: 5px;
   }
   &:hover {
-    background-color: rgba(118, 131, 143, .1);
+    background-color: rgba($color-default, .1);
   }
   &:active {
     color: $color-default;
-    background-color: rgba(118, 131, 143, .3);
+    background-color: rgba($color-default, .2);
     border-color: $btn-border-color;
   }
   &.is-disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    &:hover,
+    &:active {
+      background-color: transparent;
+    }
   }
   &.ayu-button-large {
     padding: 12px 20px;
