@@ -1,17 +1,17 @@
+// common
+$color-default: #76838f;
 $color-primary: #3e8ef7;
 $color-success: #11c26d;
 $color-info:  #0bb2d4;
 $color-warning: #eb6709;
 $color-danger: #ff4c52;
-$color-disabled: #ccd5db;
+$color-disabled: #c0c4cc;
 $color-border: #dcdfe6;
-
-$color-info-shallow: #e6f7fb;
-$color-success-shallow: #e7f9f0fb;
-$color-success-warning: #fdf0e6;
-$color-success-danger: #ffeded;
-
+// notification
 $notification-width: 300px;
 $notification-height: 80px;
 $notification-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
 $notification-offset: 10px;
+// btn
+$btn-border-color: #e4eaec;
+$btn-color: #f7f7f7;

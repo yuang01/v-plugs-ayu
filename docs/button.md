@@ -51,6 +51,14 @@
 ```
 :::
 
+### 文字按钮
+:::demo
+``` html
+<ayu-button type="text">文字按钮</ayu-button>
+<ayu-button type="text" disabled>文字按钮</ayu-button>
+```
+:::
+
 ### 朴素风格
 :::demo
 ``` html

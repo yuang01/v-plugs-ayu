@@ -67,9 +67,9 @@ export default {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  color: #76838f;
+  color: $color-default;
   background-color: transparent;
-  border-color: #e4eaec;
+  border-color: $btn-border-color;
   transition: all .15s;
   .ayu-icon+span {
     margin-left: 5px;
@@ -78,9 +78,9 @@ export default {
     background-color: rgba(118, 131, 143, .1);
   }
   &:active {
-    color: #76838f;
+    color: $color-default;
     background-color: rgba(118, 131, 143, .3);
-    border-color: #e4eaec;
+    border-color: $btn-border-color;
   }
   &.is-disabled {
     opacity: 0.5;
@@ -130,19 +130,28 @@ export default {
     }
   }
   &.ayu-button-primary {
-    @include type(#f7f7f7, #3e8ef7, #589ffc, #247cf0);
+    @include type($btn-color, $color-primary, rgba($color-primary, .8), darken($color-primary, 6%));
   }
   &.ayu-button-success {
-    @include type(#f7f7f7, #11c26d, #28d17c, #05a85c);
+    @include type($btn-color, $color-success, rgba($color-success, .8), darken($color-success, 6%));
   }
   &.ayu-button-info {
-    @include type(#f7f7f7, #0bb2d4, #28c0de, #0099b8);
+    @include type($btn-color, $color-info, rgba($color-info, .8), darken($color-info, 6%));
   }
   &.ayu-button-warning {
-    @include type(#f7f7f7, #eb6709, #f57d1b, #e79857);
+    @include type($btn-color, $color-warning, rgba($color-warning, .8), darken($color-warning, 6%));
   }
   &.ayu-button-danger {
-    @include type(#f7f7f7, #ff4c52, #ff666b, #f2353c);
+    @include type($btn-color, $color-danger, rgba($color-danger, .8), darken($color-danger, 6%));
+  }
+  &.ayu-button-text {
+    @include type($color-primary, transparent, transparent, transparent);
+    &:active {
+      color: darken($color-primary, 30%);
+    }
+    &.is-disabled { 
+      color: $color-disabled;
+    }
   }
   @mixin outlineType($bgc, $border-color, $hover-color, $active-color) {
     background-color: $bgc;
@@ -158,19 +167,24 @@ export default {
   }
   &.is-outline {
     &.ayu-button-primary {
-      @include outlineType(transparent, #3e8ef7, #f7f7f7, #0099b8);
+      @include outlineType(transparent, $color-primary, $btn-color, darken($color-primary, 6%));
     }
     &.ayu-button-success {
-      @include outlineType(transparent, #11c26d, #f7f7f7, #05a85c);
+      @include outlineType(transparent, $color-success, $btn-color, darken($color-success, 6%));
     }
     &.ayu-button-info {
-      @include outlineType(transparent, #0bb2d4, #f7f7f7, #0099b8);
+      @include outlineType(transparent, $color-info, $btn-color, darken($color-info, 6%));
     }
     &.ayu-button-warning {
-      @include outlineType(transparent, #eb6709, #f7f7f7, #e79857);
+      @include outlineType(transparent, $color-warning, $btn-color, darken($color-warning, 6%));
     }
     &.ayu-button-danger {
-      @include outlineType(transparent, #ff4c52, #f7f7f7, #f2353c);
+      @include outlineType(transparent, $color-danger, $btn-color, darken($color-danger, 6%));
+    }
+    &.ayu-button-default {
+      &:hover {
+        color: $color-primary;
+      }
     }
   }
 }
