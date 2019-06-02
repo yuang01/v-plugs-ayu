@@ -47,7 +47,7 @@ Vue.use(ayu)
 <body>
   <div id="app">
     <ayu-carousel height="500px" type="slide">
-      <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
+      <ayu-carousel-item v-for="(item, index) in imgData" :key="index">
         <img :src="item.src" alt="" style="width:100%;">
       </ayu-carousel-item>
     </ayu-carousel>
@@ -59,7 +59,7 @@ Vue.use(ayu)
     var vm = new Vue({
       el: '#app',
       data: {
-        cardata: [
+        imgData: [
           { src: 'https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
           { src: 'https://images.pexels.com/photos/1520145/pexels-photo-1520145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
           { src: 'https://images.pexels.com/photos/5946/books-yellow-book-reading.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}

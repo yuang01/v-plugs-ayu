@@ -1,6 +1,5 @@
 # 忽略目录
 examples/
-packages/
 public/
 dist/
 
