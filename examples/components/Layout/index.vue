@@ -55,6 +55,8 @@ export default {
         { path: '/message', name: 'message 消息提示' },
         { path: '/notification', name: 'Notification 通知' },
         { path: '/layout', name: 'Layout 布局' },
+        { path: '/radio', name: 'Radio 单选' },
+        { path: '/checkbox', name: 'CheckBox 多选' },
       ]
     }
   }
@@ -68,7 +70,6 @@ export default {
   }
   .router-link-active {
     color: #3e8ef7 !important;
-    background-color: #eeffde !important;
     border-right: 3px solid #3e8ef7 !important;
   }
   #app {

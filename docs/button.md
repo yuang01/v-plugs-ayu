@@ -1,7 +1,7 @@
 ## Button 按钮
 常用的操作按钮
 ### 基础用法
-:::demo
+:::demo 
 ``` html
 <ayu-button size="large">大型按钮</ayu-button>
 <ayu-button size="medium">中型按钮</ayu-button>
@@ -48,6 +48,14 @@
 :::demo
 ``` html
 <ayu-button loading type="primary">加载中</ayu-button>
+```
+:::
+
+### 文字按钮
+:::demo
+``` html
+<ayu-button type="text">文字按钮</ayu-button>
+<ayu-button type="text" disabled>文字按钮</ayu-button>
 ```
 :::
 

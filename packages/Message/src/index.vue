@@ -95,7 +95,7 @@ export default {
   font-size: 20px;
   color: $color-info;
   border: 1px solid #dcdfe6;
-  background-color: $color-info-shallow;
+  background-color: #fff;
   transition: opacity 0.3s, transform .4s;
   p {
     font-size: 14px;
@@ -106,7 +106,6 @@ export default {
 
 .ayu-message--success {
   color: $color-success;
-  background-color: $color-success-shallow;
   p {
     color: $color-success;
   }
@@ -114,7 +113,6 @@ export default {
 
 .ayu-message--warning {
   color: $color-warning;
-  background-color: $color-success-warning;
   p {
     color: $color-warning;
   }
@@ -122,7 +120,6 @@ export default {
 
 .ayu-message--error {
   color: $color-danger;
-  background-color: $color-success-danger;
   p {
     color: $color-danger;
   }

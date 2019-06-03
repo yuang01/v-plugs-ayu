@@ -83,6 +83,16 @@ export default new Router({
           name: 'layout',
           component: () => import( "../docs/layout.md")
         },
+        {
+          path: '/radio',
+          name: 'radio',
+          component: () => import( "../docs/radio.md")
+        },
+        {
+          path: '/checkbox',
+          name: 'checkbox',
+          component: () => import( "../docs/checkbox.md")
+        },
       ]
     },
   ]
