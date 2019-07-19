@@ -93,6 +93,11 @@ export default new Router({
           name: 'checkbox',
           component: () => import( "../docs/checkbox.md")
         },
+        {
+          path: '/circle',
+          name: 'circle',
+          component: () => import( "../docs/circle.md")
+        },
       ]
     },
   ]
