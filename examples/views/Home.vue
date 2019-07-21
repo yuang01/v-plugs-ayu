@@ -29,7 +29,7 @@
       <h1>网站快速成型工具</h1>
       <p>一套基于vue.js的桌面端组件库</p>
 
-      <img class="center-img" src="https://img.ssyer.com/picture/new/zl/6881f219c7d5ac895d054d9d97f5cd3e.png" alt="">
+      <img class="center-img" src="../assets/home.svg" alt="">
     </div>
 
     <footer class="footer">
