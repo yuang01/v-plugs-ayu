@@ -1,89 +1,120 @@
 <template>
   <div class="home">
-    <div class="home--panel">
-      <div class="home--describe">
+    <header class="header">
+      <div class="content">
+        <h1>
+          <router-link to='/button'>
+            <img src="../assets/ayu.png" alt="">
+          </router-link>
+        </h1>
+
+        <ul class="nav">
+          <li>
+            <router-link to="/install">安装</router-link>
+          </li>
+          <li>
+            <router-link to="/button">组件</router-link>
+          </li>
+          <li>
+            <a href='https://github.com/yuang01/v-plugs-ayu' target="_blank">Github</a>
+          </li>
+          <li>
+            <a href='http://yuang.site' target="_blank">博客</a>
+          </li>
+        </ul>
       </div>
-      <img src="../assets/ayu.png" alt="" class="logo">
-      <div class="home--btns">
-        <router-link to='/button'>
-          <span>开始使用</span>
-        </router-link>
-        <a href='https://github.com/yuang01/v-plugs-ayu' target="_blank">
-          GitHub
-        </a>
-      </div>
+    </header>
+
+    <div class="desc">
+      <h1>网站快速成型工具</h1>
+      <p>一套基于vue.js的桌面端组件库</p>
+
+      <img class="center-img" src="https://img.ssyer.com/picture/new/zl/6881f219c7d5ac895d054d9d97f5cd3e.png" alt="">
     </div>
-    <div class="hone-footer">
-      MIT License | Copyright (c) 2019 ayu
-    </div>
+
+    <footer class="footer">
+      <p>MIT License | Copyright (c) 2019 Ayu</p>
+    </footer>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {};
-  }
-};
-</script>
-
-<style lang="scss">
+<style lang="scss" scoped>
 .home {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  .home--panel {
-    width: 400px;
-    height: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -100%, 0);
-    text-align: center;
-    .logo {
-      width: 400px;
-      height: 200px;
-      path {
-        fill: #174a6e;
-      }
-    }
-    .home--describe {
-      p {
-        font-size: 12px;
-        font-weight: 400;
-      }
-    }
-  }
-  .home--btns {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-    a {
-      font-size: 20px;
-      color: #666666;
-      text-decoration: none;
-      transition: color 0.3s, border-color 0.3s;
-      border: 1px solid #88888888;
-      padding: 6px;
-      border-radius: 500px;
-      display: inline-block;
-      width: 140px;
+  .header {
+    height: 80px;
+    background-color: #fff;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 80px;
+    z-index: 100;
+    position: relative;
+    .content {
+      height: 100%;
       box-sizing: border-box;
-      &:hover {
-        color: #3e8ef7;
-        border-color: #3e8ef7;
+      border-bottom: 1px solid #dcdfe6;
+      margin: 0 auto;
+      width: 1140px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        width: 146px;
+        height: 80px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 90%;
+        }
+      }
+      .nav {
+        line-height: 80px;
+        display: inline-block;
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: $color-primary;
+        }
       }
     }
   }
-  .hone-footer {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40%;
+  .desc {
+    margin: 0 auto;
+    width: 1140px;
     text-align: center;
-    font-size: 14px;
-    font-weight: 400;
+    padding: 20px 0;
+    position: relative;
+    h1 {
+      font-size: 34px;
+      margin: 0;
+      line-height: 48px;
+      color: #555;
+    }
+    .center-img {
+      width: 100%;
+      margin-top: 20px;
+      user-select: none;
+    }
+  }
+  .footer {
+    background-color: #f7fbfd;
+    width: 100%;
+    padding: 40px 150px;
+    box-sizing: border-box;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
   }
 }
 </style>
+
