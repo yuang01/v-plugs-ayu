@@ -111,7 +111,7 @@
 ### Events
 事件名称|说明|回调参数
 :---|:---|:---
-change|在 Input 值改变时触发|(event: Event)
+change|在 Input 值改变时触发|(value)
 focus|在 Input 获得焦点时触发|(event: Event)
 blur|	在 Input 失去焦点时触发|(event: Event)
 <script>

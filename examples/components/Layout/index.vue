@@ -57,6 +57,8 @@ export default {
         { path: '/layout', name: 'Layout 布局' },
         { path: '/radio', name: 'Radio 单选' },
         { path: '/checkbox', name: 'CheckBox 多选' },
+        { path: '/circle', name: 'Circle 进度条' },
+        { path: '/inputNumber', name: 'inputNumber 计数器' },
       ]
     }
   }
