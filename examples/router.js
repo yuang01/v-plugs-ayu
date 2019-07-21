@@ -98,6 +98,11 @@ export default new Router({
           name: 'circle',
           component: () => import( "../docs/circle.md")
         },
+        {
+          path: '/inputNumber',
+          name: 'inputNumber',
+          component: () => import( "../docs/inputNumber.md")
+        },
       ]
     },
   ]

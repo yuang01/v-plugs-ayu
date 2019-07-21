@@ -88,6 +88,7 @@ export default {
     }
   },
   computed: {
+    // 对原生事件进行监听并作覆盖
     // https://cn.vuejs.org/v2/guide/components-custom-events.html#%E5%B0%86%E5%8E%9F%E7%94%9F%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%88%B0%E7%BB%84%E4%BB%B6
     inputListeners() {
       // `Object.assign` 将所有的对象合并为一个新对象
@@ -99,7 +100,10 @@ export default {
         {
           // 这里确保组件配合 `v-model` 的工作
           input: event => {
-            this.$emit('input', event.target.value)
+            this.$emit('input', event.target.value);
+          },
+          change: event => {
+            this.$emit('change', event.target.value);
           }
         }
       )
@@ -239,7 +243,7 @@ export default {
   // slot --> prepand append props
   .ayu-input__prepand,
   .ayu-input__append {
-    padding: 0 20px;
+    padding: 0 10px;
     line-height: 36px;
     font-size: inherit;
     border: 1px solid #dcdfe6;
