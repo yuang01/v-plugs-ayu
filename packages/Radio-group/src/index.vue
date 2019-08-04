@@ -26,10 +26,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.ayu-radio-group {
-  display: flex;
-  align-items: center;
-}
-</style>

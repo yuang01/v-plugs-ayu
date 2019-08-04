@@ -1,5 +1,5 @@
 // 导入公共样式
-import '../examples/style/common.scss';
+import '../examples/style/index.scss';
 // 导入字体
 import '../examples/icon/iconfont.js'
 // 导入组件

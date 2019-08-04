@@ -1,0 +1,138 @@
+[class*="ayu-col-"] {
+  float: left;
+  box-sizing: border-box;
+}
+
+.ayu-col-0 {
+  display: none;
+}
+
+@for $i from 0 through 24 {
+  .ayu-col-#{$i} {
+    width: (1 / 24 * $i * 100) * 1%;
+  }
+
+  .ayu-col-offset-#{$i} {
+    margin-left: (1 / 24 * $i * 100) * 1%;
+  }
+
+  .ayu-col-pull-#{$i} {
+    position: relative;
+    right: (1 / 24 * $i * 100) * 1%;
+  }
+
+  .ayu-col-push-#{$i} {
+    position: relative;
+    left: (1 / 24 * $i * 100) * 1%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  @for $i from 0 through 24 {
+    .ayu-col-xs-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-offset-xs-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-pull-xs-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-push-xs-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  @for $i from 0 through 24 {
+    .ayu-col-sm-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-offset-sm-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-pull-sm-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-push-sm-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  @for $i from 0 through 24 {
+    .ayu-col-md-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-offset-md-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-pull-md-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-push-md-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  @for $i from 0 through 24 {
+    .ayu-col-lg-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-offset-lg-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-pull-lg-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-push-lg-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  @for $i from 0 through 24 {
+    .ayu-col-xl-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-offset-xl-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-pull-xl-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .ayu-col-push-xl-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}

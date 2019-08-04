@@ -23,6 +23,11 @@ export default new Router({
           component: () => import("../docs/install.md")
         },
         {
+          path: "/customized",
+          name: "customized",
+          component: () => import("../docs/customized.md")
+        },
+        {
           path: "/button",
           name: "button",
           component: () => import("../docs/button.md")

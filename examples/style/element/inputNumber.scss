@@ -1,0 +1,27 @@
+.ayu-input-number {
+  // display: inline-block;
+  width: 180px;
+  /deep/ .ayu-input {
+    .ayu-input__prepand,
+    .ayu-input__append {
+      user-select: none;
+      cursor: pointer;
+      padding: 0;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    .ayu-input__inner {
+      text-align: center;
+    }
+  }
+  .prepend-button,
+  .append-button {
+    padding: 0 10px;
+  }
+  .disabled {
+    background-color: rgba($color-disabled, 0.25);
+    color: $color-disabled;
+    cursor: not-allowed;
+  }
+}

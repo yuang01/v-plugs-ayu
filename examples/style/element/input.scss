@@ -1,0 +1,138 @@
+.ayu-textarea,
+.ayu-input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@mixin base {
+  display: inline-block;
+  width: 100%;
+  padding: 0 15px;
+  line-height: 36px;
+  outline: none;
+  font-size: inherit;
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  color: #606266;
+  outline: none;
+  &:focus {
+    outline: none;
+    border: 1px solid $color-primary;
+  }
+  &:disabled {
+    background-color: rgba($color-disabled, 0.25);
+    color: $color-disabled;
+    cursor: not-allowed;
+  }
+  &::placeholder {
+    color: $color-disabled;
+  }
+}
+
+@mixin round {
+  &.round {
+    .ayu-input__inner {
+      border-radius: 200px;
+    }
+  }
+}
+// textarea
+.ayu-textarea {
+  .ayu-textarea__inner {
+    @include base;
+    min-height: 2.5em;
+    line-height: 36px;
+  }
+}
+// input
+.ayu-input {
+  font-size: 14px;
+  .ayu-input__inner {
+    @include base;
+  }
+  // round props
+  @include round;
+  // icon
+  .input-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+    height: 36px;
+    line-height: 36px;
+    color: $color-disabled;
+  }
+  // icon --> prefix and suffix props
+  &.prefix-icon {
+    .ayu-input__inner {
+      padding-left: 24px;
+    }
+    .input-icon:first-child {
+      left: 6px;
+    }
+  }
+  &.suffix-icon {
+    .ayu-input__inner {
+      padding-right: 24px;
+    }
+    .input-icon:last-child {
+      right: 6px;
+    }
+  }
+  // clear
+  &.clear-icon {
+    .ayu-input__inner {
+      padding-right: 28px;
+    }
+    .ayu-input__clear {
+      right: 10px;
+      z-index: 1;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  // slot --> prepand append props
+  .ayu-input__prepand,
+  .ayu-input__append {
+    padding: 0 10px;
+    line-height: 36px;
+    font-size: inherit;
+    border: 1px solid #dcdfe6;
+    background-color: #f5f7fa;
+    color: #909399;
+  }
+}
+// size
+.ayu-input.ayu-input--large {
+  .ayu-input__inner,
+  .ayu-input__prepand,
+  .ayu-input__append,
+  .input-icon {
+    line-height: 40px;
+    height: 40px;
+  }
+}
+.ayu-input.ayu-input--small {
+  .ayu-input__inner,
+  .ayu-input__prepand,
+  .ayu-input__append,
+  .input-icon {
+    line-height: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
+.ayu-input.ayu-input--mini {
+  .ayu-input__inner,
+  .ayu-input__prepand,
+  .ayu-input__append,
+  .input-icon {
+    line-height: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}

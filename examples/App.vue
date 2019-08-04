@@ -34,7 +34,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import './style/variable.scss';
 .my-special-button {
   position: fixed;
   right: 0;

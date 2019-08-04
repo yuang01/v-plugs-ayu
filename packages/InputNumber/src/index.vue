@@ -121,7 +121,7 @@ export default {
     // 鼠标长按事件mousedown
     handleClick(type) {
       const { step } = this;
-      const period = 200;
+      const period = 100;
       // 当鼠标长按住加号或者减号，使用定时器，间隔为100毫秒，加上step，step默认为1
       const timerHandle = () => {
         const { addDisabled, decDisabled } = this;
@@ -152,33 +152,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.ayu-input-number {
-  display: inline-block;
-  width: 180px;
-  /deep/ .ayu-input {
-    .ayu-input__prepand,
-    .ayu-input__append {
-      user-select: none;
-      cursor: pointer;
-      padding: 0;
-      &:hover {
-        color: $color-primary;
-      }
-    }
-    .ayu-input__inner {
-      text-align: center;
-    }
-  }
-  .prepend-button,
-  .append-button {
-    padding: 0 10px;
-  }
-  .disabled {
-    background-color: rgba($color-disabled, 0.25);
-    color: $color-disabled;
-    cursor: not-allowed;
-  }
-}
-</style>

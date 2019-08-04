@@ -1,17 +1,17 @@
 // common
-$color-default: #76838f;
-$color-primary: #3e8ef7;
-$color-success: #11c26d;
-$color-info:  #0bb2d4;
-$color-warning: #eb6709;
-$color-danger: #ff4c52;
-$color-disabled: #c0c4cc;
-$color-border: #dcdfe6;
+$color-default: #76838f!default;
+$color-primary: #3e8ef7!default;
+$color-success: #11c26d!default;
+$color-info:  #0bb2d4!default;
+$color-warning: #eb6709!default;
+$color-danger: #ff4c52!default;
+$color-disabled: #c0c4cc!default;
+$color-border: #dcdfe6!default;
 // notification
-$notification-width: 300px;
-$notification-height: 80px;
-$notification-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
-$notification-offset: 10px;
+$notification-width: 300px!default;
+$notification-height: 80px!default;
+$notification-shadow: 0 2px 12px 0 rgba(0,0,0,.1)!default;
+$notification-offset: 10px!default;
 // btn
-$btn-border-color: #e4eaec;
-$btn-color: #f7f7f7;
+$btn-border-color: #e4eaec!default;
+$btn-color: #f7f7f7!default;

@@ -60,7 +60,7 @@ export default {
 :::
 
 <style scoped>
-.float_input {
+.ayu-float-input {
   width: 250px!important;
 }
 .m-b-10 {

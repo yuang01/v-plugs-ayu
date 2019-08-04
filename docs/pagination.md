@@ -101,7 +101,7 @@ page-size|每页显示条目个数，支持 .sync 修饰符|number|-|10
 total|总条目数|number|-|-
 curpage|当前页数，支持 .sync 修饰符|number|-|1
 pagination-size|组件大小|string|pagination-sm、pagination-lg|-
-bgc|组件颜色|string|任意颜色值|#3e8ef7
+bgc|组件颜色|string|任意颜色值|-
 prevText|上一页文字|string|任意|&lt;(向左箭头)
 nextText|下一页文字|string|任意|&gt;(向右箭头)
 disabled|是否禁用|boolean|true、false|false

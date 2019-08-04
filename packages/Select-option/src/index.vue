@@ -99,25 +99,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-$selected-color: #3e8ef7;
-$disabled-color: #ccc;
-.select-option-wrapper {
-  padding: 0 24px 0 12px;
-  cursor: pointer;
-
-  &:not(.is-disabled):hover {
-    background-color: #f5f7fa;
-  }
-
-  &.is-selected {
-    color: $selected-color;
-  }
-
-  &.is-disabled {
-    color: $disabled-color;
-    cursor: not-allowed;
-  }
-}
-</style>

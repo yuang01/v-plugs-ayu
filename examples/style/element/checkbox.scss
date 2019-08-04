@@ -1,0 +1,64 @@
+.ayu-checkbox {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  user-select: none;
+  line-height: 1;
+  color: #606266;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 30px;
+  $checkbox-space: 8px;
+  $checkbox-size: 14px;
+  // 作用：原点和右边文字的间隔和选中的时候，激活原点的颜色（primary）
+  .ayu-checkbox_inner {
+    margin-right: $checkbox-space;
+    display: inline-flex;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    justify-content: center;
+    align-items: center;
+    .ayu-checkbox_inner-icon {
+      font-size: 12px;
+      margin: 0 2px;
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+  .ayu-radio__label {
+    font-size: $checkbox-size;
+    transition: all 0.3s;
+  }
+  .ayu-checkbox__original {
+    display: none;
+  }
+}
+.is-checked {
+  .ayu-checkbox_inner {
+    background-color: $color-primary;
+    color: azure;
+    border: $color-primary;
+  }
+  .ayu-radio__label {
+    color: $color-primary;
+  }
+}
+.is-disabled {
+  .ayu-checkbox_inner {
+    background-color: #f5f7fa;
+    border: $color-disabled;
+  }
+  &.is-checked {
+    .ayu-checkbox_inner {
+      .ayu-checkbox_inner-icon {
+        color: #ccc;
+      }
+    }
+  }
+  .ayu-radio__label {
+    color: $color-disabled;
+  }
+}

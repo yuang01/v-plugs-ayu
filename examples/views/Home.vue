@@ -39,6 +39,7 @@
 </template>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
 .home {
   .header {
     height: 80px;

@@ -18,11 +18,15 @@ npm i v-plugs-ayu -S
 在man.js中引入即可开始使用
 ``` javascript
 import ayu from 'v-plugs-ayu'
+import 'v-plugs-ayu/lib/ayu.css'
 Vue.use(ayu)
 ```
 ### CDN
-在页面上引入 js 文件即可开始使用
-``` javascript
+在页面上引入 css和js 文件即可开始使用
+``` html
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+<!-- 引入js -->
 <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
 ```
 > 建议使用 CDN 引入 Ayu 的用户在链接地址上锁定版本
@@ -40,17 +44,13 @@ Vue.use(ayu)
 <head>
   <meta charset="UTF-8">
   <title>ayu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
   <style type="text/css">
   </style>
 </head>
 
 <body>
   <div id="app">
-    <ayu-carousel height="500px" type="slide">
-      <ayu-carousel-item v-for="(item, index) in imgData" :key="index">
-        <img :src="item.src" alt="" style="width:100%;">
-      </ayu-carousel-item>
-    </ayu-carousel>
     <ayu-button type="primary" @click="open()">点击我</ayu-button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -59,11 +59,7 @@ Vue.use(ayu)
     var vm = new Vue({
       el: '#app',
       data: {
-        imgData: [
-          { src: 'https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/1520145/pexels-photo-1520145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/5946/books-yellow-book-reading.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
-        ],
+        inputValue: ''
       },
       methods: {
         open() {
@@ -71,9 +67,7 @@ Vue.use(ayu)
             title: '我是标题',
             content: '我是内容',
             onConfirm: () => {
-              this.$message({
-                content: '你点了确定哦'
-              })
+              alert('你点了确定哦');
             }
           })
         }

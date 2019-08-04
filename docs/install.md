@@ -12,13 +12,17 @@ npm i v-plugs-ayu -S
 ``` javascript 
 
 import ayu from 'v-plugs-ayu'
+import 'v-plugs-ayu/lib/ayu.css'
 Vue.use(ayu)
 ```
 
 ### CDN
 
-在页面上引入 js 文件即可开始使用
-``` javascript
+在页面上引入 css和js 文件即可开始使用
+``` html
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+<!-- 引入js -->
 <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
 ```
 > 建议使用 CDN 引入 Ayu 的用户在链接地址上锁定版本
@@ -32,6 +36,7 @@ Vue.use(ayu)
 <head>
   <meta charset="UTF-8">
   <title>ayu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
   <style type="text/css">
   </style>
 </head>
@@ -66,3 +71,6 @@ Vue.use(ayu)
 
 </html>
 ```
+
+## 我为什么要造这个轮子
+因为我想用自己的东西，感觉就是不一样，如果你能用到ayu，我将万分荣幸。

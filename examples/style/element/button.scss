@@ -1,0 +1,137 @@
+.ayu-button {
+  display: inline-flex;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  color: $color-default;
+  background-color: transparent;
+  border-color: $btn-border-color;
+  transition: all .15s;
+  .ayu-icon+span {
+    margin-left: 5px;
+  }
+  &:hover {
+    background-color: rgba($color-default, .1);
+  }
+  &:active {
+    color: $color-default;
+    background-color: rgba($color-default, .2);
+    border-color: $btn-border-color;
+  }
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:hover,
+    &:active {
+      background-color: transparent;
+    }
+  }
+  &.ayu-button-large {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  &.ayu-button-medium {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  &.ayu-button-small {
+    padding: 9px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  &.ayu-button-mini {
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  &.is-round {
+    border-radius: 20px;
+    padding: 12px 23px;
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: 12px;
+  }
+  @mixin type($color, $bgc-color, $hover-color, $active-color) {
+    color: $color;
+    background-color: $bgc-color;
+    border-color: $bgc-color;
+    &:hover {
+      background-color: $hover-color;
+    }
+    &:active {
+      background-color: $active-color;
+    }
+    &.is-disabled {
+      &:hover,
+      &:active {
+        background-color: $bgc-color;
+      }
+    }
+  }
+  &.ayu-button-primary {
+    @include type($btn-color, $color-primary, rgba($color-primary, .8), darken($color-primary, 6%));
+  }
+  &.ayu-button-success {
+    @include type($btn-color, $color-success, rgba($color-success, .8), darken($color-success, 6%));
+  }
+  &.ayu-button-info {
+    @include type($btn-color, $color-info, rgba($color-info, .8), darken($color-info, 6%));
+  }
+  &.ayu-button-warning {
+    @include type($btn-color, $color-warning, rgba($color-warning, .8), darken($color-warning, 6%));
+  }
+  &.ayu-button-danger {
+    @include type($btn-color, $color-danger, rgba($color-danger, .8), darken($color-danger, 6%));
+  }
+  &.ayu-button-text {
+    @include type($color-primary, transparent, transparent, transparent);
+    &:active {
+      color: darken($color-primary, 30%);
+    }
+    &.is-disabled { 
+      color: $color-disabled;
+    }
+  }
+  @mixin outlineType($bgc, $border-color, $hover-color, $active-color) {
+    background-color: $bgc;
+    color: $border-color;
+    border-color: $border-color;
+    &:hover {
+      background-color: $border-color;
+      color: $hover-color;
+    }
+    &:active {
+      background-color: $active-color;
+    }
+  }
+  &.is-outline {
+    &.ayu-button-primary {
+      @include outlineType(transparent, $color-primary, $btn-color, darken($color-primary, 6%));
+    }
+    &.ayu-button-success {
+      @include outlineType(transparent, $color-success, $btn-color, darken($color-success, 6%));
+    }
+    &.ayu-button-info {
+      @include outlineType(transparent, $color-info, $btn-color, darken($color-info, 6%));
+    }
+    &.ayu-button-warning {
+      @include outlineType(transparent, $color-warning, $btn-color, darken($color-warning, 6%));
+    }
+    &.ayu-button-danger {
+      @include outlineType(transparent, $color-danger, $btn-color, darken($color-danger, 6%));
+    }
+    &.ayu-button-default {
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

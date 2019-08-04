@@ -43,6 +43,7 @@ export default {
     return {
       menuPath: [
         { path: '/install', name: '安装' },
+        { path: '/customized', name: '定制化' },
         { path: '/button', name: 'button 按钮' },
         { path: '/floatinput', name: 'floatinput 浮动输入框' },
         { path: '/pagination', name: 'pagination 分页' },

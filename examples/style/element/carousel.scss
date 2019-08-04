@@ -1,0 +1,88 @@
+.ayu-carousel {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  // 箭头
+  .ayu-carousel_arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 50%;
+    background-color: rgba(31,45,61,.11);
+    color: #fff;
+    &:hover {
+      background-color: rgba(31,45,61,.3);
+    }
+  }
+  .ayu-carousel_arrow--left {
+    left: 16px;
+  }
+  .ayu-carousel_arrow--right {
+    right: 16px;
+  }
+  // 底部点
+  .ayu-carousel_indicators {
+    position: absolute;
+    list-style: none;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    .ayu-carousel_indicator {
+      display: inline-block;
+      padding: 14px 4px;
+      cursor: pointer;
+      background-color: transparent;
+      .ayu-carousel_botton {
+        display: block;
+        opacity: .48;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        transition: .3s;
+      }
+      &.is-active {
+        .ayu-carousel_botton {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  // 动画
+  .carousel-arrow-left-enter {
+    transform: translate(-200%, -50%);
+  }
+  .carousel-arrow-left-enter-active,
+  .carousel-arrow-left-leave-active,
+  .carousel-arrow-right-enter-active,
+  .carousel-arrow-right-leave-active, {
+    transition: .3s;
+  }
+  .carousel-arrow-left-leave-active {
+    transform: translate(-200%, -50%);
+  }
+  .carousel-arrow-right-enter {
+    transform: translate(200%, -50%);
+  }
+  .carousel-arrow-right-leave-active {
+    transform: translate(200%, -50%);
+  }
+}

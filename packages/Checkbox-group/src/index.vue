@@ -37,10 +37,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.ayu-checkbox-group {
-  display: flex;
-  align-items: center;
-}
-</style>
