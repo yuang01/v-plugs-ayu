@@ -10,10 +10,10 @@
 
         <ul class="nav">
           <li>
-            <router-link to="/install">安装</router-link>
+            <router-link to="/components/install">安装</router-link>
           </li>
           <li>
-            <router-link to="/button">组件</router-link>
+            <router-link to="/components/button">组件</router-link>
           </li>
           <li>
             <a href='https://github.com/yuang01/v-plugs-ayu' target="_blank">Github</a>

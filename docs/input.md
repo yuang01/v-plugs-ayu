@@ -142,26 +142,3 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss">
-  .ayu-input {
-    width: 180px;
-  }
-  .demo-input {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 15px;
-  }
-  .demo-input-pend {
-    .ayu-input {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-  .demo-input-size {
-    display: inline-flex;
-    justify-content: space-between;
-    .ayu-input {
-      margin-right: 10px;
-    }
-  }
-</style>

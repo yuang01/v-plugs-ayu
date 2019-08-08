@@ -1,12 +1,4 @@
-<!-- <ayu-circle :percent="40"></ayu-circle>
-<ayu-circle :percent="40" color="#13CE66"><span>项目2</span></ayu-circle>
-<ayu-circle :percent="40" status="warning"><span>项目2</span></ayu-circle>
-<ayu-circle :percent="40" status="info"><p>40%</p><p>太低了</p></ayu-circle> -->
-<style scoped>
-.ayu-circle {
-  margin-right: 5px;
-}
-</style>
+
 ## Circle 环形进度条
 用于展示操作进度，告知用户当前状态和预期。
 
@@ -64,7 +56,11 @@
 </script>
 ```
 :::
-
+<style scoped>
+.ayu-circle {
+  margin-right: 5px;
+}
+</style>
 ### Attributes
 |参数|说明|类型|可选值|默认值
 |:---|:---|:---|:---|:---

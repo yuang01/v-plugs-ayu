@@ -1,34 +1,6 @@
 ## Carousel 幻灯片
 在有限空间内，循环播放同一类型的图片、文字等内容
 
-<!-- ### 基础用法
-:::demo
-``` html
-<ayu-carousel height="300px" arrow="always">
-  <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
-    <img :src="item.src" alt="" style="width:100%;">
-  </ayu-carousel-item>
-</ayu-carousel>
-<script>
-export default {
-  data() {
-    return {
-      cardata: [
-        { src: 'https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/1520145/pexels-photo-1520145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/5946/books-yellow-book-reading.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
-      ]
-    }
-  }
-}
-</script>
-<style>
-  .ayu-carousel {
-    margin-bottom: 10px;
-  }
-</style>
-```
-::: -->
 
 ### 滚动轮播
 :::demo

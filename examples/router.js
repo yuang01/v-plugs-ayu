@@ -14,96 +14,96 @@ export default new Router({
       component: Home
     },
     {
-      path: "",
+      path: "/components",
       component: () => import("./components/Layout/index.vue"),
       children: [
         {
-          path: "/install",
+          path: "install",
           name: "install",
           component: () => import("../docs/install.md")
         },
         {
-          path: "/customized",
+          path: "customized",
           name: "customized",
           component: () => import("../docs/customized.md")
         },
         {
-          path: "/button",
+          path: "button",
           name: "button",
           component: () => import("../docs/button.md")
         },
         {
-          path: "/floatinput",
+          path: "floatinput",
           name: "floatinput",
           component: () => import("../docs/floatinput.md")
         },
         {
-          path: "/pagination",
+          path: "pagination",
           name: "pagination",
           component: () => import("../docs/pagination.md")
         },
         {
-          path: "/select",
+          path: "select",
           name: "select",
           component: () => import("../docs/select.md")
         },
         {
-          path: "/carousel",
+          path: "carousel",
           name: "carousel",
           component: () => import("../docs/carousel.md")
         },
         {
-          path: "/messageBox",
+          path: "messageBox",
           name: "messageBox",
           component: () => import("../docs/messageBox.md")
         },
         {
-          path: "/icon",
+          path: "icon",
           name: "icon",
           component: () => import("../docs/icon.md")
         },
         {
-          path: "/hoverTip",
+          path: "hoverTip",
           name: "hoverTip",
           component: () => import("../docs/hoverTip.md")
         },
         {
-          path: "/input",
+          path: "input",
           name: "input",
           component: () => import("../docs/input.md")
         },
         {
-          path: "/message",
+          path: "message",
           name: "message",
           component: () => import("../docs/message.md")
         },
         {
-          path: "/notification",
+          path: "notification",
           name: "notification",
           component: () => import("../docs/notification.md")
         },
         {
-          path: "/layout",
+          path: "layout",
           name: "layout",
           component: () => import("../docs/layout.md")
         },
         {
-          path: "/radio",
+          path: "radio",
           name: "radio",
           component: () => import("../docs/radio.md")
         },
         {
-          path: "/checkbox",
+          path: "checkbox",
           name: "checkbox",
           component: () => import("../docs/checkbox.md")
         },
         {
-          path: "/circle",
+          path: "circle",
           name: "circle",
           component: () => import("../docs/circle.md")
         },
         {
-          path: "/inputNumber",
+          path: "inputNumber",
           name: "inputNumber",
           component: () => import("../docs/inputNumber.md")
         }
