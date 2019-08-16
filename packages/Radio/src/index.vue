@@ -4,7 +4,7 @@
     :class="{
       'is-checked': label === model, 
       'is-disabled': isDisabled}"
-    @click.stop="handleClick"
+    @click.stop.prevent="handleClick"
   >
     <span class="ayu-radio_inner"></span>
     <input 

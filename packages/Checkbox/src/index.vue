@@ -5,7 +5,7 @@
         { 'is-checked': isChecked },
         { 'is-disabled': isDisabled }
     ]"
-    @click.stop="handleClick"
+    @click.stop.prevent="handleClick"
   >
     <span class="ayu-checkbox_inner">
       <ayu-icon icon-class="check" v-if="isChecked" class="ayu-checkbox_inner-icon"/>

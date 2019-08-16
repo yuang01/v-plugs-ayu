@@ -1,3 +1,4 @@
+// 这个组件的css写的有点粗糙，以后会重新写的
 .ayu-pagination {
   display: flex;
   /* 显示总数和跳转到多少页样式 */
@@ -131,28 +132,34 @@
     color: $color-primary;
   }
   /* 禁止点击 */
+  .page-item.disabled {
+    cursor: not-allowed;
+  }
   .page-item.disabled .page-link {
     color: #ccd5db!important;
     pointer-events: none;
-    background-color: transparent!important;
-    border-color: #e4eaec!important;
-  }
-  .ayu-pagination.disabled{
-    cursor: not-allowed;
-  }
-  .ayu-pagination.disabled .pagination .page-link,
-  .ayu-pagination.disabled .pagination .page-item.active .page-link{
-    color: #ccc!important;
-    background-color: transparent!important;
-  }
-  .ayu-pagination.disabled .pagination .page-item {
-    pointer-events: none;
-  }
-  .ayu-pagination.disabled .ayu-input-inner {
-    background-color: #f5f7fa;
-    border-color: #e4e7ed;
-    color: #c0c4cc;
-    cursor: not-allowed;
+    background-color: transparent;
+    border-color: #e4eaec;
   }
 }
 /* 中间页码的样式--结束 */
+.ayu-pagination.disabled{
+  cursor: not-allowed;
+}
+.ayu-pagination.disabled .pagination .page-link,
+.ayu-pagination.disabled .pagination .page-item.active .page-link {
+  color: #ccc;
+  background-color: transparent;
+}
+.ayu-pagination.disabled .pagination .page-item.active .page-link {
+  background-color: rgba($color: #ccc, $alpha: 0.6);
+}
+.ayu-pagination.disabled .pagination .page-item {
+  pointer-events: none;
+}
+.ayu-pagination.disabled .ayu-input-inner {
+  background-color: #f5f7fa;
+  border-color: #e4e7ed;
+  color: #c0c4cc;
+  cursor: not-allowed;
+}
