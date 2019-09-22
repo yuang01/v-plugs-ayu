@@ -1,0 +1,40 @@
+.ayu-form-item {
+  position: relative;
+  margin-bottom: 22px;
+  .ayu-form-item__label {
+    line-height: 40px;
+    vertical-align: middle;
+    padding: 0 12px 0 0;
+    font-size: 14px;
+    color: #606266;
+    box-sizing: border-box;
+  }
+  .ayu-form-item__content {
+    height: 40px;
+    position: relative;
+    &::after {
+      clear: both;
+    }
+    .ayu-button+.ayu-button {
+      margin-left: 10px;
+    }
+    .ayu-form-item__message {
+      color: $color-danger;
+      font-size: 12px;
+      line-height: 1;
+      padding-top: 4px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+  .ayu-form-item__label-required:before {
+    content: "*";
+    color: $color-danger;
+  }
+  .ayu-form-item__label-noRequired:before {
+    content: " ";
+    margin-right: 10px;
+    color: $color-danger;
+  }
+}

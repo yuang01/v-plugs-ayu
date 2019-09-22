@@ -2,8 +2,8 @@
 .ayu-pagination {
   display: flex;
   /* 显示总数和跳转到多少页样式 */
-  .pagination-sm .ayu-total,
-  .pagination-sm .ayu-pagination__jump {
+  &.pagination-sm .ayu-total,
+  &.pagination-sm .ayu-pagination__jump {
     height: 34px;
     line-height: 34px;
   }
@@ -12,8 +12,8 @@
     height: 37px;
     line-height: 37px;
   }
-  .pagination-lg .ayu-total,
-  .pagination-lg .ayu-pagination__jump {
+  &.pagination-lg .ayu-total,
+  &.pagination-lg .ayu-pagination__jump {
     height: 45px;
     line-height: 45px;
     font-size: 16px;
@@ -90,13 +90,13 @@
       border-radius: 5px;
   }
   /* 小样式 */
-  .pagination-sm .page-link {
+  &.pagination-sm .page-link {
       padding: .329rem .686rem;
       font-size: .5rem;
       line-height: 1.5;
   }
   /* 大样式 */
-  .pagination-lg .page-link {
+  &.pagination-lg .page-link {
       padding: .515rem 1.015rem;
       font-size: 1.286rem;
       line-height: 1.3333333333;

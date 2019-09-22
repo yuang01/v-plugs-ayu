@@ -1,5 +1,3 @@
-$selected-color: #3e8ef7;
-$disabled-color: #ccc;
 .select-option-wrapper {
   padding: 0 24px 0 12px;
   cursor: pointer;
@@ -9,11 +7,11 @@ $disabled-color: #ccc;
   }
 
   &.is-selected {
-    color: $selected-color;
+    color: $color-primary;
   }
 
   &.is-disabled {
-    color: $disabled-color;
+    color: $color-disabled;
     cursor: not-allowed;
   }
 }

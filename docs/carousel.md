@@ -1,11 +1,36 @@
 ## Carousel 幻灯片
 在有限空间内，循环播放同一类型的图片、文字等内容
 
-
+<script>
+export default {
+  data() {
+    return {
+      cardata: [
+        { src: 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/43156d89bbf94dd1ba580898481a9e8f.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/58c5fd3d07054f888a4364746eeb19e4.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/9a3c4d6016614eb89602006fd88cf35b.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/a6b9c15573e74064b6bac47f41b16c41.jpg'}
+      ],
+      cardata2: [
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/e9083dd47e3940d8af395ebdecb28a78.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/99cdeb1ea4eb4b7aa3cc46ac023f3c93.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/ab8a58ac79c7484d931dcf942da795c9.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/4eeb789fa9f649f0b28d7b1385ecca65.jpg'}
+      ],
+      cardata3: [
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/7ed1b3a8d76c4ad38593f0d63a22f242.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/f1d7b0cc0e9d439a92dce53fa5f05202.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/f0f00f8d72474e68b9b22a74b8bce68a.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/e2c255d254544e6f8e70503c5ffffbc4.jpg'}
+      ]
+    }
+  }
+}
+</script>
 ### 滚动轮播
 :::demo
 ``` html
-<ayu-carousel height="300px" type="slide">
+<ayu-carousel height="350px" type="slide">
   <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
     <img :src="item.src" alt="" style="width:100%;">
   </ayu-carousel-item>
@@ -15,9 +40,10 @@ export default {
   data() {
     return {
       cardata: [
-        { src: 'https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/1520145/pexels-photo-1520145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/5946/books-yellow-book-reading.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+        { src: 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/43156d89bbf94dd1ba580898481a9e8f.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/58c5fd3d07054f888a4364746eeb19e4.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/9a3c4d6016614eb89602006fd88cf35b.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/a6b9c15573e74064b6bac47f41b16c41.jpg'}
       ]
     }
   }
@@ -34,8 +60,8 @@ export default {
 ### 淡入淡出
 :::demo
 ``` html
-<ayu-carousel height="300px" type="fade">
-  <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
+<ayu-carousel height="350px" type="fade">
+  <ayu-carousel-item v-for="(item, index) in cardata2" :key="index">
     <img :src="item.src" alt="" style="width:100%;">
   </ayu-carousel-item>
 </ayu-carousel>
@@ -43,10 +69,11 @@ export default {
 export default {
   data() {
     return {
-      cardata: [
-        { src: 'https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/1520145/pexels-photo-1520145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/5946/books-yellow-book-reading.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+      cardata2: [
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/e9083dd47e3940d8af395ebdecb28a78.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/99cdeb1ea4eb4b7aa3cc46ac023f3c93.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/ab8a58ac79c7484d931dcf942da795c9.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/4eeb789fa9f649f0b28d7b1385ecca65.jpg'}
       ]
     }
   }
@@ -63,8 +90,8 @@ export default {
 ### 切换时间
 :::demo
 ``` html
-<ayu-carousel height="300px" arrow="always" :interval="5000">
-  <ayu-carousel-item v-for="(item, index) in cardata" :key="index">
+<ayu-carousel height="350px" arrow="always" :interval="5000">
+  <ayu-carousel-item v-for="(item, index) in cardata3" :key="index">
     <img :src="item.src" alt="" style="width:100%;">
   </ayu-carousel-item>
 </ayu-carousel>
@@ -72,10 +99,11 @@ export default {
 export default {
   data() {
     return {
-      cardata: [
-        { src: 'https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/1520145/pexels-photo-1520145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
-          { src: 'https://images.pexels.com/photos/5946/books-yellow-book-reading.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+      cardata3: [
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/7ed1b3a8d76c4ad38593f0d63a22f242.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/f1d7b0cc0e9d439a92dce53fa5f05202.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/f0f00f8d72474e68b9b22a74b8bce68a.jpg'},
+        { src: 'http://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/e2c255d254544e6f8e70503c5ffffbc4.jpg'}
       ]
     }
   }

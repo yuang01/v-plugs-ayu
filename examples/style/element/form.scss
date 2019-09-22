@@ -1,0 +1,16 @@
+.ayu-form-inline {
+  // 清除浮动
+  &::after {
+    content: '';
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+  }
+  .ayu-form-item {
+    float: left;
+    .ayu-form-item__content {
+      min-width: 183px;
+    }
+  }
+}

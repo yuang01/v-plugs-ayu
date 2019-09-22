@@ -1,7 +1,7 @@
 .ayu-input-number {
   // display: inline-block;
   width: 180px;
-  /deep/ .ayu-input {
+  .ayu-input {
     .ayu-input__prepand,
     .ayu-input__append {
       user-select: none;

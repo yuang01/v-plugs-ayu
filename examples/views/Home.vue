@@ -3,7 +3,7 @@
     <header class="header">
       <div class="content">
         <h1>
-          <router-link to='/button'>
+          <router-link to='/components/button'>
             <img src="../assets/ayu.png" alt="">
           </router-link>
         </h1>

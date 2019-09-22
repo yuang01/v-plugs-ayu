@@ -42,8 +42,10 @@
 </template>
 
 <script>
+import Emitter from '../../mixins/emitter.js'
 export default {
   name: 'AyuSelect',
+  mixins: [Emitter],
   props: {
     placeholder: { type: String, default: "请选择" },
     optionKey: { type: String, default: "value" },
@@ -94,6 +96,8 @@ export default {
       this.selectValue = this.selectValue.filter(item => item !== value);
       this.$emit("input", this.selectValue);
       this.$emit("change", this.selectValue);
+      // 将当前的值发送到 ayuFormItem 进行校验
+      this.dispatch('ayuFormItem','on-form-change', this.selectValue)
     },
     handleBlur(event) {
       this.isOpen = false;

@@ -60,6 +60,7 @@ export default {
         { path: '/components/checkbox', name: 'CheckBox 多选' },
         { path: '/components/circle', name: 'Circle 进度条' },
         { path: '/components/inputNumber', name: 'inputNumber 计数器' },
+        { path: '/components/form', name: 'Form 表单' },
       ]
     }
   }

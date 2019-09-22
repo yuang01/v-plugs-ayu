@@ -112,6 +112,11 @@ export default new Router({
           path: "inputNumber",
           name: "inputNumber",
           component: () => import("../docs/inputNumber.md")
+        },
+        {
+          path: "form",
+          name: "form",
+          component: () => import("../docs/form.md")
         }
       ]
     }

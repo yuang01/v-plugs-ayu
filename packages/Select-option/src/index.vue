@@ -8,8 +8,10 @@
 </template>
 
 <script>
+import Emitter from '../../mixins/emitter.js'
 export default {
   name: 'AyuOption',
+  mixins: [Emitter],
   props: {
     value: { type: [Object, String, Number], required: true },
     label: { type: String },
@@ -83,6 +85,8 @@ export default {
       }
       this.ayuSelect.$emit("change", this.ayuSelect.selectValue);
       this.ayuSelect.$emit("input", this.ayuSelect.selectValue);
+      // 将当前的值发送到 ayuFormItem 进行校验
+      this.dispatch('ayuFormItem','on-form-change', this.ayuSelect.selectValue)
     },
 
     handleClick() {

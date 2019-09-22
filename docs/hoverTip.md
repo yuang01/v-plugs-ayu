@@ -38,9 +38,9 @@
 ::: demo
 ``` html
 <ayu-hover-tip placement="right-center">
-  <template slot="hover-part"><ayu-button>向下</ayu-button></template>
+  <template slot="hover-part"><ayu-button>向右</ayu-button></template>
   <template slot="tip-part">
-    <img src="https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img">
+    <img src="https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/f24088b960b846bab1d18705a3a96719.jpg" class="img">
   </template>
 </ayu-hover-tip>
 <style scoped>
