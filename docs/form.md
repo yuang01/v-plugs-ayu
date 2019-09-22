@@ -324,7 +324,7 @@
 ### 自定义验证
 ::: demo 在`rules`中定义`validator`自定义验证
 ``` html
-<ayu-form ref="ruleForm" :model="cusFormValidate" :rules="cusRules"  labelPosition="right" labelWidth="120px">
+<ayu-form ref="cusRuleForm" :model="cusFormValidate" :rules="cusRules"  labelPosition="right" labelWidth="120px">
   <ayu-form-item label="用户名" prop="name">
     <ayu-input  v-model="cusFormValidate.name"/>
   </ayu-form-item>
@@ -332,8 +332,8 @@
     <ayu-input  v-model.number="cusFormValidate.age"/>
   </ayu-form-item>
   <ayu-form-item>
-    <ayu-button @click="resetForm('ruleForm')">重置</ayu-button>
-    <ayu-button type="primary" @click="submitForm('ruleForm')">确定</ayu-button>
+    <ayu-button @click="resetForm('cusRuleForm')">重置</ayu-button>
+    <ayu-button type="primary" @click="submitForm('cusRuleForm')">确定</ayu-button>
   </ayu-form-item>
 </ayu-form>
 
