@@ -1,0 +1,32 @@
+body.crimson {
+  $color-primary: #CE1126;
+  @import '../examples/style/index.scss';
+}
+body.coffee {
+  $color-primary: #e47b14;
+  @import '../examples/style/index.scss';
+}
+body.orange {
+  $color-primary: #fa541c;
+  @import '../examples/style/index.scss';
+}
+body.light-green {
+  $color-primary: #13c2c2;
+  @import '../examples/style/index.scss';
+}
+body.green {
+  $color-primary: #52c41a;
+  @import '../examples/style/index.scss';
+}
+body.default {
+  $color-primary: #3e8ef7;
+  @import '../examples/style/index.scss';
+}
+body.navy-blue {
+  $color-primary: #2f54eb;
+  @import '../examples/style/index.scss';
+}
+body.violet {
+  $color-primary: #722ed1;
+  @import '../examples/style/index.scss';
+}

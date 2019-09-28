@@ -1,41 +1,52 @@
 <template>
-  <div>
-    <div class="main-header">
-      <div class="main-header-logo">
-        <router-link to="/">
-          <img src="../../assets/ayu.png"
-            alt="logo">
-        </router-link>
+  <!-- <div class="container"> -->
+    <!-- <header class="header">
+      <div class="content">
+        <h1>
+          <router-link to='/'>
+            <img src="../../assets/ayu.png" alt="">
+          </router-link>
+        </h1>
+
+        <div class="right">
+          <div class="color-btn">
+            <span v-for="(item, index) in bgColorlist" :key="index" :style="{'background-color': item}"></span>
+          </div>
+          <ul class="nav">
+            <li :class="{'active': $route.path === '/components/install'}">
+              <router-link to="/components/install">安装</router-link>
+            </li>
+            <li :class="{'active': $route.path === '/components/button'}">
+              <router-link to="/components/button">组件</router-link>
+            </li>
+            <li>
+              <a href='https://github.com/yuang01/v-plugs-ayu' target="_blank">Github</a>
+            </li>
+            <li>
+              <a href='http://yuang.site' target="_blank">博客</a>
+            </li>
+          </ul>
+        </div>
+        
       </div>
-      <div class="main-header-title"></div>
-      <ul class="main-header-nav">
-        <li class="active">组件</li>
-        <li>
-          <a href='https://github.com/yuang01/v-plugs-ayu' target="_blank">
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href='http://yuang.site' target="_blank">
-            博客
-          </a>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="main-">
-      <div class="main--left">
-        <ul>
-          <li v-for="item in menuPath" :key="item.path">
-            <router-link :to="item.path">{{item.name}}</router-link>
-          </li>
-        </ul>
+    </header> -->
+    <!-- <div class="main"> -->
+
+      <div class="main-">
+        <div class="main--left">
+          <ul>
+            <li v-for="item in menuPath" :key="item.path">
+              <router-link :to="item.path">{{item.name}}</router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="main--right">
+          <router-view class="markdown"></router-view>
+        </div>
       </div>
-      <div class="main--right">
-        <router-view class="markdown"></router-view>
-      </div>
-    </div>
-  </div>
+
+    <!-- </div> -->
+  <!-- </div> -->
 </template>
 <script>
 export default {
@@ -61,111 +72,31 @@ export default {
         { path: '/components/circle', name: 'Circle 进度条' },
         { path: '/components/inputNumber', name: 'inputNumber 计数器' },
         { path: '/components/form', name: 'Form 表单' },
-      ]
+      ],
+      // bgColorlist: ['#CE1126', '#dc3545', '#fa541c', '#13c2c2', '#52c41a', '#3e8ef7', '#2f54eb', '#722ed1']
     }
-  }
+  },
+  methods:{
+    changeColor() {
+      document.getElementsByTagName('body')[0].className = 'orange';
+    },
+    changeColor2() {
+      document.getElementsByTagName('body')[0].className = 'red';
+    }
+  },
 }
 </script>
 <style lang="scss">
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Microsoft YaHei;
-  }
-  .router-link-active {
-    color: #3e8ef7 !important;
-    border-right: 3px solid #3e8ef7 !important;
-  }
   #app {
     overflow: hidden;
     padding: 0;
     width: 100%;
   }
-  #app .main-header {
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-box-shadow: 0 2px 8px #f0f1f2;
-    box-shadow: 0 2px 8px #f0f1f2;
-    position: relative;
-    z-index: 10;
-    height: 65px;
-    color: #444;
-  }
-  #app .main-header .main-header-logo {
-    height: 100%;
-    float: left;
-    margin-left: 40px;
-    position: absolute;
-  }
-  #app .main-header .main-header-logo img {
-    height: 30px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  #app .main-header .main-header-logo {
-    .router-link-active {
-      border-right: 0px!important;
-    }
-    img {
-      transform: translateY(-50%) scale(1.5);
-    }
-  }
-  #app .main-header .main-header-title {
-    height: 65px;
-    line-height: 65px;
-    font-size: 18px;
-    display: inline-block;
-    padding-left: 75px;
-    font-weight: bold;
-    a {
-      color: #3e8ef7;
-      border: 0!important;
-      background-color: transparent!important;
-      text-decoration: none;
-    }
-  }
-  #app .main-header .main-header-nav {
-    margin: 0;
-    padding: 0;
-    float: right;
-    height: 100%;
-    background: transparent;
-    margin-right: 160px;
-  }
-  #app .main-header .main-header-nav li {
-    list-style: none;
-    color: #314659;
-    height: 100%;
-    line-height: 65px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    min-width: 72px;
-    border-top: 2px solid transparent;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
-    float: left;
-    border-bottom: 3px solid #fff;
-    -webkit-transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
-      border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
-      border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
-  #app .main-header .main-header-nav li a {
-    color: #000;
-    text-decoration: none;
-  }
-  #app .main-header .main-header-nav li.active {
-    color: #3e8ef7;
-    border-bottom: 3px solid #3e8ef7;
-  }
   #app .main- {
     position: relative;
+    width: 1140px;
     padding: 40px 0 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 auto;
     height: auto;
     zoom: 1;
     display: block;
@@ -177,6 +108,10 @@ export default {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
+    .router-link-active {
+      color: var(--primary-color);
+      border-right: 3px solid var(--primary-color);
+    }
   }
   #app .main- .main--left ul {
     width: 250px;
@@ -208,7 +143,7 @@ export default {
     border-right: 1px solid #e8e8e8;
   }
   #app .main- .main--left ul li a:hover {
-    color: #3e8ef7;
+    color: var(--primary-color);
   }
   #app .main- .main--left ul li.main--link-group {
     height: auto;
@@ -233,14 +168,10 @@ export default {
     cursor: pointer;
   }
   #app .main- .main--right {
-    padding: 0 84px 140px 64px;
+    padding: 0 2px 140px 20px;
     min-height: 500px;
     overflow: hidden;
   }
-  // #app .main- .main--right a {
-  //   color: #3e8ef7;
-  //   text-decoration: none;
-  // }
   .markdown h1 {
     color: #0d1a26;
     font-weight: 500;

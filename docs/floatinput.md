@@ -1,4 +1,4 @@
-## Floatinput 浮动输入框
+# Floatinput 浮动输入框
 输入框label向上浮动效果
 
 <script>

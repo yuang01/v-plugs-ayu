@@ -1,4 +1,4 @@
-## HoverTip 提示
+# HoverTip 提示
 常用于展示鼠标 hover 时的提示信息。
 
 ### 基础用法

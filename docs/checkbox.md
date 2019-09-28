@@ -1,4 +1,4 @@
-## CheckBox 多选
+# CheckBox 多选
 一组备选项中进行多选
 <script>
 export default {

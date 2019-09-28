@@ -1,4 +1,4 @@
-## Carousel 幻灯片
+# Carousel 幻灯片
 在有限空间内，循环播放同一类型的图片、文字等内容
 
 <script>

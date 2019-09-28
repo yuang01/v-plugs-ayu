@@ -1,4 +1,4 @@
-## Layout 布局
+# Layout 布局
 
 ### 基础布局
 ::: demo 通过 `ayu-row` 和 `ayu-col` 组件，并通过 col 组件的 span 属性我们就可以自由地组合布局。

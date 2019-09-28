@@ -1,4 +1,4 @@
-## Icon字体图标
+# Icon字体图标
 提供了一套常用的图标集合
 > icon组件使用@click的时候加上.native修饰符，如@click.native=""
 

@@ -10,6 +10,13 @@ module.exports = {
   },
   css: {
     extract: true,
+    // loaderOptions: {
+    //   sass: {
+    //     data: `
+    //       @import "./examples/style/variable.scss";
+    //     `
+    //   }
+    // }
   },
   // 扩展 webpack 配置，使 packages 加入编译
   chainWebpack: config => {

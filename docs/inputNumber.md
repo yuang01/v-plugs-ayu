@@ -1,4 +1,4 @@
-## InputNumber 计数器
+# InputNumber 计数器
 仅允许输入标准的数字值，可定义范围
 <script>
   export default {
