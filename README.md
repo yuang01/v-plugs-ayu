@@ -31,7 +31,7 @@ Vue.use(ayu)
 ```
 > 建议使用 CDN 引入 Ayu 的用户在链接地址上锁定版本
 
-组件和文档正在编写和完善中，感谢您的关注和支持，谢谢, **本代码仅供交流学习，不提供维护承诺**。
+组件和文档正在编写和完善中，感谢您的关注和支持，谢谢。
 
 <a href="https://yuang01.github.io/v-plugs-ayu/dist/#/" target="_blank">文档</a> | <a href="https://yuang01.github.io/v-plugs-ayu/dist/#/" target="_blank">document</a>
 
